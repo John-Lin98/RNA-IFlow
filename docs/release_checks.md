@@ -14,7 +14,7 @@ No root LICENSE exists in the inspected authoritative source revision. A license
 
 The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. The latest manuscript approval is not established.
 
-The Table 2 resident-model timing source has been located and reaggregated from 3,000 timing records: median across two repeats within each task/condition, then median across 300 groups. RNA-IFlow-RL is 0.73166435575 s/K8 and RNA-IFlow is 0.88450397525 s/K8, matching the displayed 0.73/0.88. See `results/tables/resident_runtime/`. An older 12-target runtime supplement reports different medians and is not used. Native-search runtime rows follow a separate scope and still need their own evidence packaging; resident neural timing excludes setup/warmup and later scoring.
+The Table 2 resident-model timing source has been located and reaggregated from 3,000 timing records: median across two repeats within each task/condition, then median across 300 groups. RNA-IFlow-RL is 0.73166435575 s/K8 and RNA-IFlow is 0.88450397525 s/K8, matching the displayed 0.73/0.88. See `results/tables/resident_runtime/`. An older 12-target runtime supplement reports different medians and is not used. Native-search runtime is packaged separately in `results/tables/native_runtime/`, with failure counts retained; resident neural timing excludes setup/warmup and later scoring. Execution-wrapper portability remains pending.
 
 ## Remaining release gates
 

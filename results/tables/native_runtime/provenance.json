@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {
+      "method": "DRAG",
+      "summary_sha256": "c9d5094d766f778847b8fdd92407b9af2d6f8e2e680908262bbf37282482dd03",
+      "plan_sha256": "43b661a18504e09d434025c8a116a4f000dd40e256a696ce41f834c63ad8891b",
+      "failure_semantics": "timeouts/empty outputs stay in runtime and accuracy denominators"
+    },
+    {
+      "method": "RNAinverse-pf",
+      "summary_sha256": "ae7fd15040947586838d33c85d1a8fc27837ef902bb64be774b05f83f0ee3cfd",
+      "plan_sha256": "cfe3d8e2f8a2079782b73e079e38078bb50c8af35125290d2537110169710110",
+      "failure_semantics": "timeouts/empty outputs stay in runtime and accuracy denominators"
+    }
+  ],
+  "verification": "300 groups per method, median and returned/failed counts recomputed",
+  "scope": "Native return/search including setup; not resident neural generation",
+  "quality_table_link": "Timing run is distinct from original Table 1 accuracy ledger; no sequence identity asserted"
+}

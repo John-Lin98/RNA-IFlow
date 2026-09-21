@@ -1,0 +1,3 @@
+method,k,task_condition_groups,native_return_seconds_median,attempted_candidates,returned_candidates,failed_candidates,timeout_candidates,timing_scope
+DRAG,8,300,14.863661034964025,2400,2400,0,0,full100targets x3conditions native wrapper return/search time incl.setup; not directly comparable to resident neural generation without qualifier
+RNAinverse-pf,8,300,133.5565340486355,2400,1575,825,825,full100targets x3conditions native wrapper return/search time incl.setup; not directly comparable to resident neural generation without qualifier
