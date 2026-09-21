@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "r7_delivery_manifest_sha256": "a2ae7f811aab8ef22477c5ceb9e406cd40269836eb9507babeeac50e598dc45e",
+  "r7_render_script_sha256": "28d33e3ef0d3fa14bf7a2b36bfd23b7b419dc790f36499a329ee1d6eb0b4155b",
+  "source_files": {
+    "case_frozen_and_window.json": "ed312e6492d6bb121be5e3ddd5d0aa715c04e5221ac4e3a6eabf7d3aeefb7dad",
+    "coverage_tradeoff.csv": "ca5cde23b9847034c3b8973f11ca2a95de11cb819f964593853803f6aa53ed25",
+    "figure2_checkpoint_P1_P8.csv": "4f6a83bd9c82750f442ac6cbb24bacd79f9fee48d105171333c13455d25a1758",
+    "figure2_density_curve.csv": "b1efc92178fddef8efed94818fedde26fee832d622dd8e8397a5e618583e7025",
+    "figure2_density_summary.json": "249827c3875333420a32ba513bc135b7a148f315c81a6dbe88a984d68bf3b541",
+    "figure2_training.csv": "a451d7fb35ac705ec57cdf1df2275a67539b334f675a34f3610969c80f081215",
+    "flow_initial_state_boxes.json": "13d2786f4927a2b480eb775828c21a2a77b816fa81b77a37b1599f8b2277a343",
+    "flow_state_aggregate.csv": "0a8d975a71b6df4fa974602016edac77753c8cade8799e6dbb0065aa93430b34",
+    "policy_mechanics.csv": "382bb94fc74c593e125bf63c9888fb3a5203dbcb11f7c13666b7ec1ab542c585",
+    "process_arc_selection.json": "f523fc8266685f9bb19dfd2daf77536d4ef53913bef6ee981f15670fde0af3c9",
+    "sequence_evolution.csv": "3c4d86cb0f6fd8614f1625984c58cf7fdcaff113fbfcd16a0c7c9a9e48be1ea1"
+  },
+  "training_history_sources": [
+    {
+      "source_file": "training_history_01.jsonl",
+      "sha256": "1333ebc38ca7f268732fc93a7fe6c7564a1b809c43e77dbfb8990d4c6e101c7a"
+    },
+    {
+      "source_file": "training_history_02.jsonl",
+      "sha256": "237c21b5b79f8308b4ee5c3907aed3e4dfe8451ef1f8bc6d2447345a66954f26"
+    },
+    {
+      "source_file": "training_history_03.jsonl",
+      "sha256": "25b39510e125f724a98e6f65a527d489ac5cfece430ab9e6a946ffa36d2383b4"
+    },
+    {
+      "source_file": "training_history_04.jsonl",
+      "sha256": "284a837d2d319f35476eeef77cbb3214d545644cad13c5378b1a29714e37f6c1"
+    },
+    {
+      "source_file": "training_history_05.jsonl",
+      "sha256": "64628e9b9f84eb8654a276b37300f8349f67de1f06c7ade9695a003563873f08"
+    },
+    {
+      "source_file": "training_history_06.jsonl",
+      "sha256": "e6c7e1b76610ff4f6afc35ba943461a370e39a945d5ad45e7de52c09ec092cd4"
+    }
+  ],
+  "verification": "R7 delivery hashes; referenced training/checkpoint/coverage source hashes",
+  "scope": "Compact source data for Figure2, Flow, Figure4 coverage and case study; no raw candidate distributions",
+  "excluded": "Candidate-level distribution/hit tables and rendered binaries are omitted as duplicate raw/derived assets"
+}

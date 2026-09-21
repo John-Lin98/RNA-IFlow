@@ -1,0 +1,17 @@
+{
+  "estimator": "Gaussian KDE with reflection at 0 and 1, renormalized on [0,1]",
+  "bandwidth": 0.025,
+  "grid_points": 401,
+  "shared_parameters_across_methods_and_panels": true,
+  "mean_source": "raw 2400-candidate samples; never estimated from KDE",
+  "metrics": {
+    "target_probability": {
+      "RNA-IFlow_mean": 0.10532414293739482,
+      "RNA-IFlow-RL_mean": 0.4366306566316706
+    },
+    "corrected_NED": {
+      "RNA-IFlow_mean": 0.37067877890247597,
+      "RNA-IFlow-RL_mean": 0.09373712379082079
+    }
+  }
+}
