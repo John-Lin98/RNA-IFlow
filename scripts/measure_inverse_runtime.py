@@ -88,6 +88,22 @@ def run_group(spec, output):
     return receipt
 
 
+def summarize(results, plan_sha256, smoke=False):
+    returned = sum(r['returned_valid_candidates'] for r in results)
+    return dict(
+        status='complete_smoke' if smoke else 'complete', method='RNAinverse-pf',
+        task_condition_groups=len(results), K=8, attempted_candidates=8 * len(results),
+        returned_candidates=returned, failed_candidates=8 * len(results) - returned,
+        timeout_candidates=sum(r['timeout_candidates'] for r in results),
+        run_time_seconds_per_K8_group_median=statistics.median(r['run_time_seconds'] for r in results),
+        post_scoring_seconds_per_K8_group_median=statistics.median(r['post_scoring_seconds'] for r in results),
+        end_to_end_seconds_per_K8_group_median=statistics.median(r['end_to_end_seconds'] for r in results),
+        plan_sha256=plan_sha256,
+        scope='Native process setup and internal folding included; common post-scoring separate; not resident neural latency',
+        failure_semantics='Timeout slots stay in denominators; child/scorer errors abort without completion',
+        groups=results)
+
+
 def main():
     if '--candidate-mode' in sys.argv:
         candidate()
@@ -124,17 +140,8 @@ def main():
     dump(args.output / 'plan.json', plan)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         results = list(pool.map(lambda spec: run_group(spec, args.output), specs))
-    returned = sum(r['returned_valid_candidates'] for r in results)
-    dump(args.output / 'summary.json', dict(
-        status='complete_smoke' if args.smoke_first_task else 'complete', method='RNAinverse-pf',
-        task_condition_groups=len(results), K=8, attempted_candidates=8 * len(results),
-        returned_candidates=returned, failed_candidates=8 * len(results) - returned,
-        timeout_candidates=sum(r['timeout_candidates'] for r in results),
-        run_time_seconds_per_K8_group_median=statistics.median(r['run_time_seconds'] for r in results),
-        post_scoring_seconds_per_K8_group_median=statistics.median(r['post_scoring_seconds'] for r in results),
-        end_to_end_seconds_per_K8_group_median=statistics.median(r['end_to_end_seconds'] for r in results),
-        failure_semantics='Timeout slots stay in denominators; child/scorer errors abort without completion',
-        groups=results))
+    dump(args.output / 'summary.json', summarize(
+        results, hashlib.sha256((args.output / 'plan.json').read_bytes()).hexdigest(), args.smoke_first_task))
 
 
 if __name__ == '__main__':

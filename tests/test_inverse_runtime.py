@@ -11,6 +11,16 @@ spec.loader.exec_module(runtime)
 
 
 class InverseRuntimeTest(unittest.TestCase):
+    def test_summary_export_fields_and_smoke_label(self):
+        rows = [dict(returned_valid_candidates=7, timeout_candidates=1, run_time_seconds=2.,
+                     post_scoring_seconds=.5, end_to_end_seconds=2.5)]
+        summary = runtime.summarize(rows, 'a' * 64, smoke=True)
+        self.assertEqual(summary['status'], 'complete_smoke')
+        self.assertEqual(summary['attempted_candidates'], 8)
+        self.assertEqual(summary['failed_candidates'], 1)
+        self.assertEqual(summary['plan_sha256'], 'a' * 64)
+        self.assertIn('not resident', summary['scope'])
+
     def test_eight_calls_and_timeout_accounting(self):
         good = Mock(returncode=0)
         good.communicate.return_value = (json.dumps({'sequence': 'ACGU', 'status': 'ok'}), '')
