@@ -2,6 +2,10 @@
 
 GitHub and Hugging Face must remain private until explicit publication approval.
 
+## Fast regression tests
+
+Run `python -m unittest discover -s tests -v`. Five tests currently cover the frozen condition/seed mapping, rejection of foreign benchmark bytes, missing/duplicate candidate coverage, invalid scoring inputs, and direct ViennaRNA NED/probability/MFE agreement. These tests require the installed dependencies but no weights, benchmark data, or GPU. They passed in the existing environment; independent clean-environment validation remains pending.
+
 ## Inventory
 
 Run `python scripts/update_inventory.py` from any directory. It indexes only tracked and non-ignored files within this release repository, excludes its own self-referential inventory entry, rejects model binaries and files larger than 5 MB, and records destination SHA and size separately from upstream source SHA and size. Original-source hashes are not rewritten after portability adaptations. Release-authored files use logical `release:` paths, not private server paths. A complete current-file inventory is not evidence that all required paper assets have been included.
