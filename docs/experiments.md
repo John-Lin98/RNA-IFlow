@@ -29,7 +29,15 @@ python scripts/aggregate_main_results.py --input /path/to/normalized-candidates 
 
 Benchmark keys are `eterna100v2`, `eterna100`, `rfam27`, and `rnasolo764`. The script rejects incomplete seed/task/candidate coverage and failed evaluations, and checks the frozen main-model values. It does not regenerate candidates or calculate an approved final SD table. Required raw candidates are not redistributed here; hashes are recorded in `results/tables/aggregation_provenance.json`.
 
-The single-target inference example is not a benchmark reproduction command: formal evaluation also requires the original task ordering and task-index random-seed mapping. A portable full-benchmark adapter and end-to-end reproduction instructions remain release requirements.
+The single-target inference example is not a benchmark reproduction command. Use the portable main-model adapter with the original benchmark JSONL bytes (including task order):
+
+```bash
+python scripts/evaluate_benchmark.py --model /path/to/downloaded-model --benchmark eterna100v2 --tasks /path/to/eterna100v2.jsonl --output /path/to/fresh-evaluation --device cpu
+```
+
+Supported benchmark keys are `eterna100v2`, `eterna100`, `rfam27`, and `rnasolo764`. Their required SHA values are recorded in `results/provenance/main_evaluation_receipts.json`; modified/reordered input files are rejected. The adapter fixes K=8, H=8 and the three temperature conditions, with `condition_seed + original_task_index * 1000003`. Output uses the corrected paper NED, not the legacy extra normalization. Failed runs do not receive a completion summary; existing output directories are never overwritten.
+
+Add `--smoke-first-task` for an explicitly smoke-only run preserving original index zero. CPU smoke has passed for one task and all 24 candidates. Full-dataset reproduction and device-level numerical equivalence have not been rerun for this release; no new benchmark claim is made. Dataset acquisition/redistribution instructions and baseline adapters remain pending.
 
 ## Exclusions
 
