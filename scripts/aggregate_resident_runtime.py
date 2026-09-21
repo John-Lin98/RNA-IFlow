@@ -4,8 +4,32 @@ import collections
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 import statistics
+
+METHODS = {'RNA-IFlow', 'RNA-IFlow-RL', 'RNA-Design-LM SL', 'RNA-Design-LM SL+RL', 'GoForth'}
+
+
+def validate_source(summary, rows):
+    """Reject partial/foreign plans and nonphysical timings before aggregation."""
+    plan = summary['plan']
+    if (plan['K'], plan['tasks'], plan['repeats'], plan['conditions']) != (8, 100, 2, [1009, 2027, 3037]):
+        raise ValueError('Not the frozen full100 K8 two-repeat protocol')
+    for methods in (plan['methods'], [r['method'] for r in summary['methods']]):
+        if len(methods) != 5 or set(methods) != METHODS:
+            raise ValueError('Expected exactly the five resident methods')
+    if not plan['models_resident_simultaneously'] or len(rows) != 3000:
+        raise ValueError('Not a complete resident-model ledger')
+    for row in rows:
+        for key in ('generation_seconds', 'post_scoring_seconds'):
+            value = row[key]
+            if not math.isfinite(value) or value < 0:
+                raise ValueError('Nonfinite or negative timing: ' + key)
+    for row in summary['methods']:
+        value = row['run_time_seconds_per_K8_group']
+        if not math.isfinite(value) or value < 0:
+            raise ValueError('Invalid reported runtime')
 
 
 def main():
@@ -21,8 +45,10 @@ def main():
     digest = hashlib.sha256(raw).hexdigest()
     if digest != summary['ledger_sha256'] or summary['status'] != 'complete':
         raise ValueError('Incomplete or mismatched source evidence')
+    rows = list(map(json.loads, raw.splitlines()))
+    validate_source(summary, rows)
     groups = collections.defaultdict(list)
-    for row in map(json.loads, raw.splitlines()):
+    for row in rows:
         if row['returned_candidates'] != 8 or row['candidate_identity_mismatches'] != 0:
             raise ValueError('Candidate identity/coverage mismatch')
         groups[row['method'], row['task_id'], row['condition_seed']].append(row)
