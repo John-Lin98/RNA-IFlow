@@ -2,6 +2,7 @@
 import csv
 import hashlib
 import io
+import json
 from pathlib import Path
 import subprocess
 
@@ -11,6 +12,10 @@ INVENTORY = ROOT / 'paper_release_inventory.tsv'
 
 def main():
     old = {r['destination_path']: r for r in csv.DictReader(INVENTORY.open(), delimiter='\t')}
+    for source in json.loads((ROOT / 'results/provenance/supervised_source_manifest.json').read_text()):
+        old[source['destination_path']] = dict(
+            source, role='training', paper_artifact='Supervised RNA-IFlow parent',
+            include_exclude='include', reason='Exact supervised-training source dependency; Git blob verified')
     names = subprocess.check_output(
         ['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=ROOT
     ).decode().split('\0')

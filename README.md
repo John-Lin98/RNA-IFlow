@@ -18,7 +18,7 @@ python scripts/load_export.py /path/to/downloaded-model
 python scripts/infer.py --model /path/to/downloaded-model --structure '(((...)))' --candidates 8 --seed 1009 --temperature 0.8
 ```
 
-The model directory must contain the HF package, including its config and export manifest. CPU inference has passed a local smoke test; a clean installation remains to be validated. See [inference details](docs/inference.md).
+The model directory must contain the HF package, including its config and export manifest. Independent download SHA checks and CPU inference in a clean installation passed. See [inference details](docs/inference.md).
 
 ## Main results
 
@@ -33,7 +33,7 @@ U2442; arithmetic mean over seed/temperature conditions `(1009, 0.8)`, `(2027, 1
 
 ## Reproduction and layout
 
-See [experiment map](docs/experiments.md) for entrypoints and current reproduction boundaries. No datasets or model binaries are stored in GitHub.
+See [experiment map](docs/experiments.md) and [training recipe](docs/training.md) for entrypoints and current reproduction boundaries. No datasets or model binaries are stored in GitHub.
 
 - `experiments/`: source implementation and its dependency closure.
 - `scripts/`: export, portable inference, equivalence checks, and aggregation.

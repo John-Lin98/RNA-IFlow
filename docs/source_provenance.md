@@ -20,3 +20,7 @@ Input SHA gates and strict loads are implemented in `scripts/export_model.py`. T
 The upstream backbone checkpoint omits unused pooler parameters. Their deterministic constructor values are preserved in the export; they are not claimed to originate from the source checkpoint and are not used by the model's last-hidden-state inference path.
 
 The inference export omits optimizer and RNG state and is not an exact-resume training checkpoint. Its HF revision and hashes are listed in `model/README.md`. Download/load validation is a separate gate from local export equivalence.
+
+## Supervised source is a separate snapshot
+
+The supervised epoch-six parent predates the RL source revision. Its original receipt identifies `c332d2c9bace0dd586cfbfd119a24c762f8232ce`; trainer, model and evaluator Git blobs match its recorded hashes. The seven-file closure is preserved byte-for-byte under `experiments/supervised_snapshot/`, independently of the later RL/inference code. The original supervised selection scorer is not the corrected paper-quality scorer. See `docs/training.md` for the command, asset identities and this distinction. These files are actual parent-training dependencies, not unrelated historical experiments.
