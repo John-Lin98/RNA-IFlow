@@ -40,7 +40,7 @@ def main():
         row = old.get(name, dict(destination_path=name, source_path='release:' + name,
             role=role, paper_artifact='Release reproduction; see docs/experiments.md',
             source_revision='release-working-tree', sha256=digest, size=str(len(raw)),
-            include_exclude='include', reason='Release-authored artifact; final QA pending'))
+            include_exclude='include', reason='Release-authored artifact; QA status in docs/release_checks.md'))
         if row['source_path'].startswith('release:'):
             row.update(sha256=digest, size=str(len(raw)),
                        reason='Release-authored artifact; QA status in docs/release_checks.md')
