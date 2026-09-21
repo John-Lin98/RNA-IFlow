@@ -10,6 +10,8 @@ Run `python -m unittest discover -s tests -v`. Five tests currently cover the fr
 
 The additional `test_finite_policy.py` checks bridge values, finite transition normalization/stay mass, terminal replacement, reward arithmetic and joint-ratio/time-sum PPO arithmetic. The expanded eight-test suite passed in the clean CPU environment. It does not validate full training reproduction.
 
+The subsequent configuration-identity fix adds a ninth test for activation/byte tampering. All nine tests and actual fresh-download package loading passed. The independent review closed the configuration-binding issue; full-benchmark equivalence and asset-acquisition gaps remain open in `results/reports/release_review_zh.md`.
+
 Run `python scripts/update_inventory.py` from any directory. It indexes only tracked and non-ignored files within this release repository, excludes its own self-referential inventory entry, rejects model binaries and files larger than 5 MB, and records destination SHA and size separately from upstream source SHA and size. Original-source hashes are not rewritten after portability adaptations. Release-authored files use logical `release:` paths, not private server paths. A complete current-file inventory is not evidence that all required paper assets have been included.
 
 ## License
