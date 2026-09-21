@@ -1,0 +1,41 @@
+{
+  "ledger_sha256": "8c94c9a486a55ab53fb5faee4db6b74235e469c008a857d20628a64e8ae54d06",
+  "summary_sha256": "2e743d41d276c06362be391222110e6989aef3f3af3aed04dea1ddc0db665ca8",
+  "plan": {
+    "K": 8,
+    "benchmark_sha256": "7514e053c8044d2dc96909e40383474375add1e8b926aa19417980a1e37c9412",
+    "conditions": [
+      1009,
+      2027,
+      3037
+    ],
+    "methods": [
+      "RNA-IFlow",
+      "RNA-IFlow-RL",
+      "RNA-Design-LM SL",
+      "RNA-Design-LM SL+RL",
+      "GoForth"
+    ],
+    "models_resident_simultaneously": true,
+    "ordering": "cyclic rotated methods per target-condition; reverse task order and method order on repeat2",
+    "repeats": 2,
+    "scope": "full100_target_interleaved_paired_runtime",
+    "scoring_processes": 4,
+    "script_sha256": "aa4c2e13e02ec2b9b8f0b745281acc535e001f8eba8a37eb2f08911a579c161e",
+    "shared_hardware": true,
+    "source_candidates_sha256": {
+      "GoForth": "4fb872ba59fab57c8d923dafcd52682cdf0ad698aec640e0299b664e9bbb6caf",
+      "RNA-Design-LM SL": "7bf0224ebc45438ef8cee2d3a2d63832b777ba81a9d598d356ba8eb7f46934ba",
+      "RNA-Design-LM SL+RL": "d0aeb3bcbfd16bfc5801c0168ccfc7c9214060b71bd6b11e2824397e6abf5688",
+      "RNA-IFlow": "c3e18f53527e237a1bf58e6eb4e2efd8c24f51c9dbebb1fc969c858bcb56e83c",
+      "RNA-IFlow-RL": "da6bbcb19272ddae1cd61e56d70cd5610a5987235552972cc53c6c7a0c19b7cb"
+    },
+    "status": "admitted",
+    "tasks": 100,
+    "timing_definition": "seconds to return8sequences excluding loading/lookup setup/warmup; subsequent uniform Vienna scoring separate",
+    "torch_cpu_threads": 2
+  },
+  "aggregation": "Median of two repeats per task/condition, then median over 300 groups",
+  "scope": "Resident neural generation only; setup/warmup and subsequent scoring excluded",
+  "native_search_rows": "Separate protocol; not included here"
+}

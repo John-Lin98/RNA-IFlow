@@ -1,0 +1,369 @@
+{
+  "eterna100": {
+    "receipt": {
+      "arm": "ours_final_c3_d5",
+      "bad_count": 0,
+      "benchmark": {
+        "name": "Eterna100",
+        "rows": 100,
+        "sha256": "beec5ee30b0232cf5e4433193663cbfc5ad4be6dd03bd11cc27d9ec7b635f831"
+      },
+      "code_identity": {
+        "adapter_sha256": "74b915c49e74169ff4b093ddfac1f98991e1e3e6d54550eddbe7091f803b4a2f",
+        "fair_evaluator_sha256": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model_sha256": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9"
+      },
+      "coverage": {
+        "benchmark_tasks": 100,
+        "candidates": 8,
+        "seeds": 3,
+        "tasks": 100
+      },
+      "coverage_scale": {
+        "kind": "c3_official2790_d5",
+        "source_checkpoint_sha256": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "source_contract_sha256": "be1fa2c7e2c3d35886fc0a0010b8b32f38576cef2ba35d9f30d55495365ef3ea",
+        "source_receipt_sha256": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "start_update": 2093
+      },
+      "evaluation_role": "formal",
+      "formal_evaluation": true,
+      "group_objective": "thermodynamic_grpo",
+      "legal_pair_actions": {
+        "count": 300,
+        "validated": true
+      },
+      "max_cuda_memory_bytes": 489323008,
+      "method": "structured-discrete-mixture-dfm-domino-ppo",
+      "replay": {
+        "count": 300,
+        "validated": true
+      },
+      "rollout_refresh": {
+        "candidates_per_logical_update": 64,
+        "checkpoint_boundary": "after-both-refreshes",
+        "groups_per_logical_update": 8,
+        "logical_update_task_cursor_advance": 4,
+        "optimizer_steps_per_logical_update": 2,
+        "refreshes_per_logical_update": 2,
+        "resume": "exact-logical-update-boundary-only"
+      },
+      "rollout_refresh_mode": "per_policy_epoch",
+      "runtime_seconds": 975.6165702342987,
+      "sampler": {
+        "candidates": 8,
+        "kernel": "(1-rho)delta+rho*p_clean",
+        "policy": "structured-discrete-mixture-dfm-domino-v1",
+        "schema_version": 3,
+        "seed_temperature_map": {
+          "1009": 0.8,
+          "2027": 1,
+          "3037": 1.2
+        },
+        "trajectory_steps": 8
+      },
+      "schema_version": 1,
+      "source_sha256": {
+        "adapter": "74b915c49e74169ff4b093ddfac1f98991e1e3e6d54550eddbe7091f803b4a2f",
+        "benchmark": "beec5ee30b0232cf5e4433193663cbfc5ad4be6dd03bd11cc27d9ec7b635f831",
+        "endpoint_policy": "9c049a51dd057ad05e4252f8dceb8cef6d9347341ea6e8a2de72145e186ab04a",
+        "fair_evaluate": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9",
+        "final_checkpoint": "198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8",
+        "final_contract": "dfb4841416c8cd16bdb5279e5da5f009e6f476a17e4bfe1e7e1acdc54eac1cc0",
+        "final_receipt": "28dc5235d5ed41cbb4ebdecd8cbd6f6b3a50b275e0c4fee949a68874dfe03638",
+        "rnaernie_model": "0321a1402074927e1163027b425ae2d8bd5f26e577c87e51fbc632984eb233d3",
+        "source_checkpoint": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "source_receipt": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "supervised_checkpoint": "8e221cc4c4382a5421890724c0548cf64492fe1be4556d498878e86e83056bc5",
+        "u96_checkpoint": "ba63d1b47075acbfe926c28c5a2fd41aa400324eef31862203c4eed2e9ec39b8",
+        "u96_receipt": "ee76aa3c61f62471b8b2759e6b62b3e3374dfa6cff1191dbd5436c47665cee28"
+      },
+      "status": "complete",
+      "viennarna": {
+        "dangles": 2,
+        "temperature_c": 37,
+        "uniq_ML": 1,
+        "version": "2.7.2"
+      }
+    },
+    "receipt_sha256": "65e7e40d50b9623a6e60b8dee0676e481c6271bc3d88768d7c45e6a3ca9cfb69",
+    "normalized_candidates_sha256": "de2ef34efec59fce96abd6d3b3fa07fcfae519888eaa50a3220e44c21dfd9a24",
+    "reaggregation_summary_sha256": "ba2df63e5d61fafbeed6174238f64668c1561971b0db37a82c2d1d3e75cc63b1"
+  },
+  "eterna100v2": {
+    "receipt": {
+      "arm": "c3_official2790_d5_scale",
+      "bad_count": 0,
+      "benchmark": {
+        "name": "Eterna100-v2",
+        "sha256": "7514e053c8044d2dc96909e40383474375add1e8b926aa19417980a1e37c9412"
+      },
+      "code_identity": {
+        "adapter_sha256": "f188081c62627da210956dea8f85c054d3a8676f7a46d34caf68d47173e6b8f2",
+        "fair_evaluator_sha256": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model_sha256": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9"
+      },
+      "coverage": {
+        "benchmark_tasks": 100,
+        "candidates": 8,
+        "seeds": 3,
+        "tasks": 100
+      },
+      "coverage_scale": {
+        "kind": "c3_official2790_d5",
+        "source_checkpoint_sha256": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "source_contract_sha256": "be1fa2c7e2c3d35886fc0a0010b8b32f38576cef2ba35d9f30d55495365ef3ea",
+        "source_receipt_sha256": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "start_update": 2093
+      },
+      "evaluation_role": "formal",
+      "formal_evaluation": true,
+      "group_objective": "thermodynamic_grpo",
+      "legal_pair_actions": {
+        "count": 300,
+        "validated": true
+      },
+      "max_cuda_memory_bytes": 489323008,
+      "method": "structured-discrete-mixture-dfm-domino-ppo",
+      "replay": {
+        "count": 300,
+        "validated": true
+      },
+      "rollout_refresh": {
+        "candidates_per_logical_update": 64,
+        "checkpoint_boundary": "after-both-refreshes",
+        "groups_per_logical_update": 8,
+        "logical_update_task_cursor_advance": 4,
+        "optimizer_steps_per_logical_update": 2,
+        "refreshes_per_logical_update": 2,
+        "resume": "exact-logical-update-boundary-only"
+      },
+      "rollout_refresh_mode": "per_policy_epoch",
+      "runtime_seconds": 1248.8411645889282,
+      "sampler": {
+        "candidates": 8,
+        "kernel": "(1-rho)delta+rho*p_clean",
+        "policy": "structured-discrete-mixture-dfm-domino-v1",
+        "schema_version": 3,
+        "seed_temperature_map": {
+          "1009": 0.8,
+          "2027": 1,
+          "3037": 1.2
+        },
+        "trajectory_steps": 8
+      },
+      "schema_version": 1,
+      "source_sha256": {
+        "adapter": "f188081c62627da210956dea8f85c054d3a8676f7a46d34caf68d47173e6b8f2",
+        "benchmark": "7514e053c8044d2dc96909e40383474375add1e8b926aa19417980a1e37c9412",
+        "endpoint_policy": "9c049a51dd057ad05e4252f8dceb8cef6d9347341ea6e8a2de72145e186ab04a",
+        "fair_evaluate": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9",
+        "rnaernie_model": "0321a1402074927e1163027b425ae2d8bd5f26e577c87e51fbc632984eb233d3",
+        "scale_checkpoint": "198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8",
+        "scale_contract": "dfb4841416c8cd16bdb5279e5da5f009e6f476a17e4bfe1e7e1acdc54eac1cc0",
+        "scale_receipt": "28dc5235d5ed41cbb4ebdecd8cbd6f6b3a50b275e0c4fee949a68874dfe03638",
+        "scale_source_checkpoint": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "scale_source_receipt": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "supervised_checkpoint": "8e221cc4c4382a5421890724c0548cf64492fe1be4556d498878e86e83056bc5",
+        "u96_checkpoint": "ba63d1b47075acbfe926c28c5a2fd41aa400324eef31862203c4eed2e9ec39b8",
+        "u96_receipt": "ee76aa3c61f62471b8b2759e6b62b3e3374dfa6cff1191dbd5436c47665cee28"
+      },
+      "status": "complete",
+      "viennarna": {
+        "dangles": 2,
+        "temperature_c": 37,
+        "uniq_ML": 1,
+        "version": "2.7.2"
+      }
+    },
+    "receipt_sha256": "fb0cd4dc3c4849ca7a4b0935a0bec3cb1d121cc0498258da0af80d3b3cca9637",
+    "normalized_candidates_sha256": "da6bbcb19272ddae1cd61e56d70cd5610a5987235552972cc53c6c7a0c19b7cb",
+    "reaggregation_summary_sha256": "dbc9d2320004cd793d530bf165c81efc3a5280d3b1c6a8b45f90af708103c9b5"
+  },
+  "rfam27": {
+    "receipt": {
+      "arm": "ours_final_c3_d5",
+      "bad_count": 0,
+      "benchmark": {
+        "name": "Rfam-Taneda-27",
+        "rows": 27,
+        "sha256": "727d2f712e0168cb8c6ca856b453887a9b9fc27187099c0a4568efe017209e38"
+      },
+      "code_identity": {
+        "adapter_sha256": "74b915c49e74169ff4b093ddfac1f98991e1e3e6d54550eddbe7091f803b4a2f",
+        "fair_evaluator_sha256": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model_sha256": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9"
+      },
+      "coverage": {
+        "benchmark_tasks": 27,
+        "candidates": 8,
+        "seeds": 3,
+        "tasks": 27
+      },
+      "coverage_scale": {
+        "kind": "c3_official2790_d5",
+        "source_checkpoint_sha256": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "source_contract_sha256": "be1fa2c7e2c3d35886fc0a0010b8b32f38576cef2ba35d9f30d55495365ef3ea",
+        "source_receipt_sha256": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "start_update": 2093
+      },
+      "evaluation_role": "formal",
+      "formal_evaluation": true,
+      "group_objective": "thermodynamic_grpo",
+      "legal_pair_actions": {
+        "count": 81,
+        "validated": true
+      },
+      "max_cuda_memory_bytes": 482869760,
+      "method": "structured-discrete-mixture-dfm-domino-ppo",
+      "replay": {
+        "count": 81,
+        "validated": true
+      },
+      "rollout_refresh": {
+        "candidates_per_logical_update": 64,
+        "checkpoint_boundary": "after-both-refreshes",
+        "groups_per_logical_update": 8,
+        "logical_update_task_cursor_advance": 4,
+        "optimizer_steps_per_logical_update": 2,
+        "refreshes_per_logical_update": 2,
+        "resume": "exact-logical-update-boundary-only"
+      },
+      "rollout_refresh_mode": "per_policy_epoch",
+      "runtime_seconds": 303.79484033584595,
+      "sampler": {
+        "candidates": 8,
+        "kernel": "(1-rho)delta+rho*p_clean",
+        "policy": "structured-discrete-mixture-dfm-domino-v1",
+        "schema_version": 3,
+        "seed_temperature_map": {
+          "1009": 0.8,
+          "2027": 1,
+          "3037": 1.2
+        },
+        "trajectory_steps": 8
+      },
+      "schema_version": 1,
+      "source_sha256": {
+        "adapter": "74b915c49e74169ff4b093ddfac1f98991e1e3e6d54550eddbe7091f803b4a2f",
+        "benchmark": "727d2f712e0168cb8c6ca856b453887a9b9fc27187099c0a4568efe017209e38",
+        "endpoint_policy": "9c049a51dd057ad05e4252f8dceb8cef6d9347341ea6e8a2de72145e186ab04a",
+        "fair_evaluate": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9",
+        "final_checkpoint": "198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8",
+        "final_contract": "dfb4841416c8cd16bdb5279e5da5f009e6f476a17e4bfe1e7e1acdc54eac1cc0",
+        "final_receipt": "28dc5235d5ed41cbb4ebdecd8cbd6f6b3a50b275e0c4fee949a68874dfe03638",
+        "rnaernie_model": "0321a1402074927e1163027b425ae2d8bd5f26e577c87e51fbc632984eb233d3",
+        "source_checkpoint": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "source_receipt": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "supervised_checkpoint": "8e221cc4c4382a5421890724c0548cf64492fe1be4556d498878e86e83056bc5",
+        "u96_checkpoint": "ba63d1b47075acbfe926c28c5a2fd41aa400324eef31862203c4eed2e9ec39b8",
+        "u96_receipt": "ee76aa3c61f62471b8b2759e6b62b3e3374dfa6cff1191dbd5436c47665cee28"
+      },
+      "status": "complete",
+      "viennarna": {
+        "dangles": 2,
+        "temperature_c": 37,
+        "uniq_ML": 1,
+        "version": "2.7.2"
+      }
+    },
+    "receipt_sha256": "e732c3d719ccba2a5ccc0bad500d42defede3b44dab2b55a26129c3b586511b9",
+    "normalized_candidates_sha256": "1ea869dafe21835baaeeececf7511d356379ec8845f136c9c80af4be1e614969",
+    "reaggregation_summary_sha256": "009e3cd354240988225ba2ebd7512526346c53f924d178a775c30c08f7b2fc16"
+  },
+  "rnasolo764": {
+    "receipt": {
+      "arm": "ours_c3_d5_u2442",
+      "bad_count": 0,
+      "benchmark": {
+        "name": "RNAsolo-764-full",
+        "rows": 764,
+        "sha256": "410ae7c9df3894e39770e7d1798f92321bef26a7325ba7e943a225133da029a0"
+      },
+      "code_identity": {
+        "adapter_sha256": "74b915c49e74169ff4b093ddfac1f98991e1e3e6d54550eddbe7091f803b4a2f",
+        "fair_evaluator_sha256": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model_sha256": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9"
+      },
+      "coverage": {
+        "benchmark_tasks": 764,
+        "candidates": 8,
+        "seeds": 3,
+        "tasks": 764
+      },
+      "coverage_scale": {
+        "kind": "c3_official2790_d5",
+        "source_checkpoint_sha256": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "source_contract_sha256": "be1fa2c7e2c3d35886fc0a0010b8b32f38576cef2ba35d9f30d55495365ef3ea",
+        "source_receipt_sha256": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "start_update": 2093
+      },
+      "evaluation_role": "formal",
+      "formal_evaluation": true,
+      "group_objective": "thermodynamic_grpo",
+      "legal_pair_actions": {
+        "count": 2292,
+        "validated": true
+      },
+      "max_cuda_memory_bytes": 488443904,
+      "method": "structured-discrete-mixture-dfm-domino-ppo",
+      "replay": {
+        "count": 2292,
+        "validated": true
+      },
+      "rollout_refresh": {
+        "candidates_per_logical_update": 64,
+        "checkpoint_boundary": "after-both-refreshes",
+        "groups_per_logical_update": 8,
+        "logical_update_task_cursor_advance": 4,
+        "optimizer_steps_per_logical_update": 2,
+        "refreshes_per_logical_update": 2,
+        "resume": "exact-logical-update-boundary-only"
+      },
+      "rollout_refresh_mode": "per_policy_epoch",
+      "runtime_seconds": 9681.33591389656,
+      "sampler": {
+        "candidates": 8,
+        "kernel": "(1-rho)delta+rho*p_clean",
+        "policy": "structured-discrete-mixture-dfm-domino-v1",
+        "schema_version": 3,
+        "seed_temperature_map": {
+          "1009": 0.8,
+          "2027": 1,
+          "3037": 1.2
+        },
+        "trajectory_steps": 8
+      },
+      "schema_version": 1,
+      "source_sha256": {
+        "adapter": "74b915c49e74169ff4b093ddfac1f98991e1e3e6d54550eddbe7091f803b4a2f",
+        "benchmark": "410ae7c9df3894e39770e7d1798f92321bef26a7325ba7e943a225133da029a0",
+        "endpoint_policy": "9c049a51dd057ad05e4252f8dceb8cef6d9347341ea6e8a2de72145e186ab04a",
+        "fair_evaluate": "3e6d6512d1691238b79a69d3066591b614d40756a0ec42238677b3923afa5b64",
+        "fair_model": "e8bf2ee1e2d782ac453f6b00779e82b2b54d66ef4d901d29fbeacf3186f182c9",
+        "final_checkpoint": "198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8",
+        "final_contract": "dfb4841416c8cd16bdb5279e5da5f009e6f476a17e4bfe1e7e1acdc54eac1cc0",
+        "final_receipt": "28dc5235d5ed41cbb4ebdecd8cbd6f6b3a50b275e0c4fee949a68874dfe03638",
+        "rnaernie_model": "0321a1402074927e1163027b425ae2d8bd5f26e577c87e51fbc632984eb233d3",
+        "source_checkpoint": "4fa5cc5e361891d28cf939f85752491d4bdbf495b5d97b6c3a0be5084c74b768",
+        "source_receipt": "988af96656af81e1de1093f93f6f9919bf0392d70888e7d91740102adf6f9939",
+        "supervised_checkpoint": "8e221cc4c4382a5421890724c0548cf64492fe1be4556d498878e86e83056bc5",
+        "u96_checkpoint": "ba63d1b47075acbfe926c28c5a2fd41aa400324eef31862203c4eed2e9ec39b8",
+        "u96_receipt": "ee76aa3c61f62471b8b2759e6b62b3e3374dfa6cff1191dbd5436c47665cee28"
+      },
+      "status": "complete",
+      "viennarna": {
+        "dangles": 2,
+        "temperature_c": 37,
+        "uniq_ML": 1,
+        "version": "2.7.2"
+      }
+    },
+    "receipt_sha256": "b6c18288ecf51bf66775d33edb3615e7909dd9c692bec3c8d1efdd126de480c9",
+    "normalized_candidates_sha256": "8b8542686f9d934ffcdedbf9572454045485c66b25a1f503c3877cd5ca0b4064",
+    "reaggregation_summary_sha256": "3d16972d09591c0a45e00107bec560c33c28e3d18882a2f3e03e67391e0bddd3"
+  }
+}

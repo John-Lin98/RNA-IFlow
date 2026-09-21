@@ -1,0 +1,30 @@
+{
+  "sources": [
+    {
+      "source_file": "RNA-IFlow-RL__eterna100v2.jsonl",
+      "sha256": "da6bbcb19272ddae1cd61e56d70cd5610a5987235552972cc53c6c7a0c19b7cb",
+      "bytes": 1873216
+    },
+    {
+      "source_file": "RNA-IFlow-RL__eterna100.jsonl",
+      "sha256": "de2ef34efec59fce96abd6d3b3fa07fcfae519888eaa50a3220e44c21dfd9a24",
+      "bytes": 1860134
+    },
+    {
+      "source_file": "RNA-IFlow-RL__rfam27.jsonl",
+      "sha256": "1ea869dafe21835baaeeececf7511d356379ec8845f136c9c80af4be1e614969",
+      "bytes": 549417
+    },
+    {
+      "source_file": "RNA-IFlow-RL__rnasolo764.jsonl",
+      "sha256": "8b8542686f9d934ffcdedbf9572454045485c66b25a1f503c3877cd5ca0b4064",
+      "bytes": 9581536
+    }
+  ],
+  "metric": "P@k uses uMFE_hit; MFE@k uses mfe_hit",
+  "coverage_validation": "PASS",
+  "frozen_main_values": "PASS",
+  "protocol_binding": "normalized rows omit temperature; original evaluation contract binding still required",
+  "manuscript_comparison": "pending latest approved manuscript readback",
+  "training_seed_claim": false
+}

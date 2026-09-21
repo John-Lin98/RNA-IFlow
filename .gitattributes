@@ -1,1 +1,3 @@
 * text=auto eol=lf
+# Preserve CSV bytes so published SHA values survive checkout unchanged.
+*.csv -text whitespace=cr-at-eol

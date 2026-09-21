@@ -1,0 +1,28 @@
+from reward_cache import REWARD_EVALUATION_POLICY
+
+FORMAL_ENDPOINT_CONTRACT = {
+    "method": "simplex-endpoint-policy-trajectory-grpo",
+    "formal_rl": True,
+    "action_policy": "categorical-single-paired-categorical-clean-endpoint",
+    "transition": "sampled-endpoint-dirichlet-conditional-velocity",
+    "ratio": "per-flow-step-joint-action-clipped-surrogate",
+    "not_claimed_equivalent_to_gaussian_flow_grpo": True,
+    "credit_assignment": "uniform",
+    "rl_trainable_scope": "adapter_and_head",
+    "updates": 100,
+    "tasks_per_update": 2,
+    "candidates": 12,
+    "trajectory_steps": 8,
+    "policy_epochs": 2,
+    "temperatures": [1.0],
+    "learning_rate": 1e-5,
+    "weight_decay": 0.01,
+    "clip_ratio": 0.2,
+    "kl_coefficient": 0.01,
+    "ce_coefficient": 0.1,
+    "entropy_coefficient": 0.0,
+    "gradient_clip_norm": 1.0,
+    "supervised_batch_size": 32,
+    "maximum_invalid_reward_evaluation_rate": 0.001,
+    "reward_evaluation_policy": REWARD_EVALUATION_POLICY,
+}

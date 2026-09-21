@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "updates_complete": 2442,
+  "updates_this_run": 349,
+  "start_update": 2093,
+  "target_updates": 2442,
+  "world_size": 2,
+  "bad_count": 0,
+  "contract_sha256": "64b323150a68b53fecd48c4af6036c6efe0faddbe47d6fd6730f29fd57d6e03c",
+  "runtime_seconds": 13484.180318593979,
+  "trainable_parameters": 14494917,
+  "checkpoint_sha256": "198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8",
+  "original_receipt_sha256": "28dc5235d5ed41cbb4ebdecd8cbd6f6b3a50b275e0c4fee949a68874dfe03638",
+  "note": "Compact derived receipt; omitted private paths and verbose histograms; original receipt hash retained"
+}

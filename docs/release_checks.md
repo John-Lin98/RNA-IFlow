@@ -1,0 +1,26 @@
+# Release checks and outstanding gates
+
+GitHub and Hugging Face must remain private until explicit publication approval.
+
+## Inventory
+
+Run `python scripts/update_inventory.py` from any directory. It indexes only tracked and non-ignored files within this release repository, excludes its own self-referential inventory entry, rejects model binaries and files larger than 5 MB, and records destination SHA and size separately from upstream source SHA and size. Original-source hashes are not rewritten after portability adaptations. Release-authored files use logical `release:` paths, not private server paths. A complete current-file inventory is not evidence that all required paper assets have been included.
+
+## License
+
+No root LICENSE exists in the inspected authoritative source revision. A license for the new project cannot be inferred from dependency licenses or repository ownership. The RNAErnie model card declares Apache-2.0 metadata, but this alone does not complete the code, dataset, or derived-weight redistribution review. Author/rights-holder approval and third-party notices remain required. No LICENSE is invented, and no redistribution permission is asserted.
+
+## Manuscript and timing
+
+The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. The latest manuscript approval is not established.
+
+The Table 2 resident-model timing source has been located and reaggregated from 3,000 timing records: median across two repeats within each task/condition, then median across 300 groups. RNA-IFlow-RL is 0.73166435575 s/K8 and RNA-IFlow is 0.88450397525 s/K8, matching the displayed 0.73/0.88. See `results/tables/resident_runtime/`. An older 12-target runtime supplement reports different medians and is not used. Native-search runtime rows follow a separate scope and still need their own evidence packaging; resident neural timing excludes setup/warmup and later scoring.
+
+## Remaining release gates
+
+- Independent HF fresh-download SHA and load smoke.
+- Full paper experiment/config/baseline/ablation and figure-source closure.
+- Portable full-benchmark reproduction and clean-environment installation.
+- Latest approved manuscript reconciliation and approved citation metadata.
+- Rights-holder license decision and third-party redistribution audit.
+- Final secret/size scan, Chinese PR and review, clean committed release branch.
