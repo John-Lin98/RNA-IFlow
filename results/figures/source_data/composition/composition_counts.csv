@@ -1,0 +1,10 @@
+setting,profile_category,count,fraction
+Original mix,Core,1850,0.6630824372759857
+Original mix,Hard,490,0.1756272401433691
+Original mix,Other / unprofiled,450,0.1612903225806451
+Core-only,Core,2790,1.0
+Core-only,Hard,0,0.0
+Core-only,Other / unprofiled,0,0.0
+Hard-enriched,Core,2318,0.8308243727598567
+Hard-enriched,Hard,472,0.1691756272401433
+Hard-enriched,Other / unprofiled,0,0.0

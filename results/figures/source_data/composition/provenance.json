@@ -1,0 +1,52 @@
+{
+  "time": "2026-09-15T20:35:05.004387",
+  "files": [
+    {
+      "source_file": "official2790_tasks.jsonl",
+      "sha256": "eb7900b95c193f35bfefd295f571363ce935ebe16eed20737cf5d4110704a993"
+    },
+    {
+      "source_file": "core_only_tasks.jsonl",
+      "sha256": "6550dfe570570dfe5c2895c3e8addab64b6d5e4b1126e4b1600dafe522d8e00d"
+    },
+    {
+      "source_file": "submission_like_tasks.jsonl",
+      "sha256": "ebc050c71c34e996e6ffd8e6849d8b760df731b380bb0567bc78354f82c17fbe"
+    },
+    {
+      "source_file": "profiles.jsonl",
+      "sha256": "b9f1e5bccf14ea032a692107e6b67c24084e0d5a5de3f38da3cecbd0befdb936"
+    }
+  ],
+  "original_mix_count": 2790,
+  "core_only_count": 2790,
+  "core_only_tiers": {
+    "core": 2790
+  },
+  "core_only_ids_in_original_mix": 1237,
+  "core_only_unique_structures_in_original_mix": 1237,
+  "core_only_is_original_membership_subset": false,
+  "hard_arm_tiers": {
+    "core": 2318,
+    "hard_mfe_solved": 410,
+    "hard_near_mfe": 62
+  },
+  "hard_arm_ids_in_original_mix": 1340,
+  "hard_arm_unique_structures_in_original_mix": 1340,
+  "source_definition": "core means original learnability selection criterion AoN>=0.1 and NSD>0.5; official2790 membership is diagnostic only, not the selection criterion",
+  "rename_to_Original_membership_is_valid": false,
+  "safe_category_labels": [
+    "Learnable core",
+    "Hard",
+    "Other"
+  ],
+  "requested_category_labels": [
+    "Original",
+    "Hard",
+    "Other"
+  ],
+  "caption_boundary": "Original can only denote original learnability-selected core if author explicitly accepts that definition, not all original2790 training samples.",
+  "quality_source_sha256": "7c0da1ebba3de4b7e8e7402cef3403861e4fd913bbb4b8074612df6dde5c9b62",
+  "counts_source_sha256": "e6226e117ebeabf4355c512bf1c0747f1b82efa916bfb8751450fa49fd6ff335",
+  "verification_scope": "Source file hashes, summary metrics, count totals/fractions; not new training"
+}
