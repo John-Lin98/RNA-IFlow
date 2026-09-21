@@ -1,0 +1,42 @@
+{
+  "inference_summary_sha256": "8caff1e910377eeff9c26362909de60c133b5042e298d76f88db747df20ff361",
+  "figure_per_seed_sha256": "628468b70f7a6e86f93a06f158b6a9ae6f534e04efd6fb109fd5658d12a167af",
+  "profile_rows_sha256": "bbaf54efe2ecbcb655340d80eaaa69c34bfc76b44f6dde4df5a18e3b0d36639b",
+  "figure_cost_sha256": "b9e26bef176e27465395dbbab92f46c8d3c3e708ee88fcf1f90fcff11adc19b7",
+  "profile_receipts": [
+    {
+      "source_file": "F2_s1009_profile_r1.json",
+      "sha256": "5bc7a37c398b15bfdf7634e575c1480639cda716bd86e25d29b3ef0782405835"
+    },
+    {
+      "source_file": "F2_s1009_profile_r2.json",
+      "sha256": "07bd1aa3f637232843ce0f87459295a219cbbbeac39d8249e8b2e00f13db72a8"
+    },
+    {
+      "source_file": "G16_s1009_profile_r1.json",
+      "sha256": "433a3701d1e047989a79f2521514deebfcffe3c5a92c7d6e08aa5b35942d0939"
+    },
+    {
+      "source_file": "G16_s1009_profile_r2.json",
+      "sha256": "056bb151910bdbec7206d2ed077f213675342ebbeeaa2a6f63c7c727fc96d5ea"
+    },
+    {
+      "source_file": "G2_s1009_profile_r1.json",
+      "sha256": "a2ecda9d439081e01db43e46df9d95d0243ede027a85e0327d461de3d59971e4"
+    },
+    {
+      "source_file": "G2_s1009_profile_r2.json",
+      "sha256": "f432df0e3f42eb7187f4cb3a3e735ab566c79808963b8a4adba16a1760810b66"
+    },
+    {
+      "source_file": "G4_s1009_profile_r1.json",
+      "sha256": "f87fe6bfc904e3c30cfa0fba72dac9997e67ea5a46bae32b675aab9f4d6233f6"
+    },
+    {
+      "source_file": "G4_s1009_profile_r2.json",
+      "sha256": "adefe4820bc28d80a38c4012494021a4cebf43ee7711926bc8ced7db4522b26e"
+    }
+  ],
+  "verification": "H costs checked against recorded summary; G medians reaggregated over 64 update rows; receipt hashes verified",
+  "limitations": "No timing rerun; no raw inference-ledger reaggregation; shared-hardware cost is not uncertainty across training seeds"
+}
