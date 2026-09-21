@@ -4,7 +4,7 @@ GitHub and Hugging Face must remain private until explicit publication approval.
 
 ## Fast regression tests
 
-Run `python -m unittest discover -s tests -v`. Five tests currently cover the frozen condition/seed mapping, rejection of foreign benchmark bytes, missing/duplicate candidate coverage, invalid scoring inputs, and direct ViennaRNA NED/probability/MFE agreement. These tests require the installed dependencies but no weights, benchmark data, or GPU. They passed in the existing environment; independent clean-environment validation remains pending.
+Run `python -m unittest discover -s tests -v`. Five tests currently cover the frozen condition/seed mapping, rejection of foreign benchmark bytes, missing/duplicate candidate coverage, invalid scoring inputs, and direct ViennaRNA NED/probability/MFE agreement. These tests require the installed dependencies but no weights, benchmark data, or GPU. All five passed in both the existing environment and a newly installed isolated CPU environment with PYTHONPATH/LD_LIBRARY_PATH unset and user site packages disabled.
 
 ## Inventory
 
@@ -22,9 +22,9 @@ The Table 2 resident-model timing source has been located and reaggregated from 
 
 ## Remaining release gates
 
-- Independent HF fresh-download SHA and load smoke.
+- HF fresh-download SHA and strict-load/K8 smoke passed; evidence is in `results/provenance/hf_readback_qa.json`. Full benchmark reproduction remains separate.
 - Full paper experiment/config/baseline/ablation and figure-source closure.
-- Portable full-benchmark reproduction and clean-environment installation.
+- Portable full-benchmark reproduction (clean CPU installation and minimal inference have passed).
 - Latest approved manuscript reconciliation and approved citation metadata.
 - Rights-holder license decision and third-party redistribution audit.
 - Final secret/size scan, Chinese PR and review, clean committed release branch.

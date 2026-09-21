@@ -10,6 +10,6 @@ Hugging Face: https://huggingface.co/jojojoojooo/RNA-IFlow-RL （private）。
 
 导出包含冻结 backbone、监督参数及 U2442 更新参数，不含 optimizer/RNG。不能作为精确续训 checkpoint。原始 .pt 暂不额外上传：其权重是局部状态，精确恢复还依赖原始数据、合同、父模型与 RNG；本次优先提供独立推理模型，避免误导和重复权重。
 
-223 个张量逐项相等，固定双样本 CPU 输出差异为 0。权重已上传到 revision `774a352f55016ff32012d2936d629b12bd6045dc`，HF LFS 元数据记录的 SHA256 与上述导出 SHA 相同、大小为 350239076 bytes。fresh download SHA 与下载后 load smoke 仍待验收；远端元数据不替代实际下载验证。
+223 个张量逐项相等，固定双样本 CPU 输出差异为 0。权重已上传到 revision `774a352f55016ff32012d2936d629b12bd6045dc`，大小为 350239076 bytes。独立 fresh download 后，模型及 8 个元数据文件均通过下载包内的 SHA256 清单校验。下载包已在全新 CPU 环境严格加载并完成 K=8 单目标推理与 ViennaRNA 评分；这是发布链路 smoke，不是完整 benchmark 重跑。详见 `results/provenance/hf_readback_qa.json`。
 
 使用方法见 [推理文档](../docs/inference.md)。许可证仍待完整核验，仓库与模型均不得擅自公开。
