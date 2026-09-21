@@ -6,7 +6,9 @@ This map records verified assets without substituting engineering smoke tests fo
 
 Checkpoint: C3+D5 U2442, original SHA256 `198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8`.
 
-HF package: [jojojoojooo/RNA-IFlow-RL](https://huggingface.co/jojojoojooo/RNA-IFlow-RL/tree/774a352f55016ff32012d2936d629b12bd6045dc), private. Uploaded revision is pinned here; fresh-download validation remains pending.
+HF package: [jojojoojooo/RNA-IFlow-RL](https://huggingface.co/jojojoojooo/RNA-IFlow-RL/tree/774a352f55016ff32012d2936d629b12bd6045dc), private. Independent fresh-download SHA, strict load and clean-environment inference smoke passed; see `results/provenance/hf_readback_qa.json`.
+
+The [method implementation map](methods.md) identifies FPM, SPD and TTR functions and distinguishes logical updates, optimizer steps, training group size and inference candidate budget.
 
 All main results use seed/temperature pairs `(1009, 0.8)`, `(2027, 1.0)`, `(3037, 1.2)`, eight candidates per task and condition, eight transition steps, and ViennaRNA 2.7.2. Pass@k uses `uMFE_hit`; MFE@k uses `mfe_hit`. Averages across these conditions do not establish training-seed uncertainty. No unapproved SD table format is frozen.
 
