@@ -1,0 +1,141 @@
+{
+  "scope": "Installed direct dependencies only; excludes transitive, dataset, upstream model and project rights clearance",
+  "license_audit_status": "INCOMPLETE",
+  "dependencies": [
+    {
+      "package": "torch",
+      "required_version": "2.4.0",
+      "installed_version": "2.4.0+cpu",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "license_files": [
+        {
+          "distribution_relative_path": "torch-2.4.0+cpu.dist-info/LICENSE",
+          "sha256": "605a7dd8648cf774e407b2fef9a09ce4271bc45b692e18d5bd047b268c2d8768"
+        }
+      ]
+    },
+    {
+      "package": "transformers",
+      "required_version": "4.57.1",
+      "installed_version": "4.57.1",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "distribution_relative_path": "transformers-4.57.1.dist-info/licenses/LICENSE",
+          "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+        }
+      ]
+    },
+    {
+      "package": "numpy",
+      "required_version": "2.2.6",
+      "installed_version": "2.2.6",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "license_files": [
+        {
+          "distribution_relative_path": "numpy-2.2.6.dist-info/LICENSE.txt",
+          "sha256": "c002bd26de7dc7aa464250a0de063d58fe55974452e4389e5c21c350a820bf06"
+        },
+        {
+          "distribution_relative_path": "numpy/_core/include/numpy/random/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec"
+        },
+        {
+          "distribution_relative_path": "numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6"
+        },
+        {
+          "distribution_relative_path": "numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f"
+        }
+      ]
+    },
+    {
+      "package": "scipy",
+      "required_version": "1.14.1",
+      "installed_version": "1.14.1",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "license_files": [
+        {
+          "distribution_relative_path": "scipy-1.14.1.dist-info/LICENSE.txt",
+          "sha256": "18128be14d9ea3bc9440075a898a948e3327e96886d01678ee8e052510571580"
+        },
+        {
+          "distribution_relative_path": "scipy/_lib/_uarray/LICENSE",
+          "sha256": "c80c39b5fce06ba4897e14e0b0a88b54458334d951eb1361402ffad2cfb863b4"
+        },
+        {
+          "distribution_relative_path": "scipy/fft/_pocketfft/LICENSE.md",
+          "sha256": "c254b2b5fd30ae3c89d36ba061730563b9760fca04f1b746a1b2c3157da2c789"
+        },
+        {
+          "distribution_relative_path": "scipy/sparse/linalg/_eigen/arpack/COPYING",
+          "sha256": "0926566f9f406178d1214f8cc796e166b1213dd7c05e0c5b461a8b8ac9e50bbe"
+        },
+        {
+          "distribution_relative_path": "scipy/spatial/qhull_src/COPYING.txt",
+          "sha256": "34db0c0c4f931861d720555c9cd7a2e228d1290ba29af0f2ee80c41bb2038afb"
+        }
+      ]
+    },
+    {
+      "package": "safetensors",
+      "required_version": "0.8.0",
+      "installed_version": "0.8.0",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "distribution_relative_path": "safetensors-0.8.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "package": "ViennaRNA",
+      "required_version": "2.7.2",
+      "installed_version": "2.7.2",
+      "license_expression": null,
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "distribution_relative_path": "viennarna-2.7.2.dist-info/licenses/AUTHORS",
+          "sha256": "0ec9170c6eac7f29b04fb01501ffdc7a9751d99fc371d13cd48c6cdf5d753ff6"
+        },
+        {
+          "distribution_relative_path": "viennarna-2.7.2.dist-info/licenses/COPYING",
+          "sha256": "7776cce4c6155eba82ea6bcb5c108f25b9fb0f604664421bfd6da94930028d8c"
+        }
+      ]
+    },
+    {
+      "package": "pyarrow",
+      "required_version": "17.0.0",
+      "installed_version": "17.0.0",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "distribution_relative_path": "pyarrow-17.0.0.dist-info/LICENSE.txt",
+          "sha256": "229dbe29e4e1344e95172f6f3a4277ec0da5c7850cb03897c47f3a24b7afce08"
+        }
+      ]
+    }
+  ]
+}

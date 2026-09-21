@@ -1,0 +1,74 @@
+{
+  "benchmark_sources": [
+    {
+      "role": "Eterna100-v1 DesiRNA inputs"
+    },
+    {
+      "role": "Eterna100-v2 DesiRNA inputs"
+    },
+    {
+      "role": "extra public benchmark exclusions",
+      "sha256": "8771c0964cb3bc56c91a5dee7f73a9ad6ac7962034d78a4bf97ce1125154ba21"
+    }
+  ],
+  "contract_version": 2,
+  "counts": {
+    "benchmark_overlap_removed": 10,
+    "eterna100v2": 100,
+    "smoke_train": 1000,
+    "smoke_validation": 200,
+    "source_rows": 999656,
+    "train": 100000,
+    "train_extra_sequence_pairs": 5001,
+    "train_unique_structures": 94999,
+    "unique_structures": 99999,
+    "unique_valid_pairs": 999646,
+    "validation": 5000,
+    "validation_unique_structures": 5000
+  },
+  "duplicate_pairs_after": 0,
+  "exact_structure_overlap_benchmarks": 0,
+  "exact_structure_overlap_train_validation": 0,
+  "files": {
+    "eterna100v2.jsonl": {
+      "rows": 100,
+      "sha256": "355f67febf63e902150d215f70c250b427ac673cbad41b5302615521b3e06ba1"
+    },
+    "smoke_train.jsonl": {
+      "rows": 1000,
+      "sha256": "2d92f0461b0dd8d8d76e7afaa2d21b7618eb69ff2e77b759eec1d729b8faa214"
+    },
+    "smoke_validation.jsonl": {
+      "rows": 200,
+      "sha256": "1add6c08f5e644a849e9a703db25654848b90dc32904fd291ec983faa549fa2d"
+    },
+    "train.jsonl": {
+      "rows": 100000,
+      "sha256": "b2b1da59f1a493c3be08b68053e0b3bee8f533736f1dc2d981b171e425cbd77f"
+    },
+    "validation.jsonl": {
+      "rows": 5000,
+      "sha256": "ce45b59c554ab984d4caf7a1d92afdc0c5eb1c081ce5ad06242abf684a11be95"
+    }
+  },
+  "length_bins_train": {
+    "000-064": 9260,
+    "065-128": 13291,
+    "129-256": 26675,
+    "257-510": 50774
+  },
+  "length_bins_validation": {
+    "000-064": 463,
+    "065-128": 664,
+    "129-256": 1330,
+    "257-510": 2543
+  },
+  "seed": 1009,
+  "source": {
+    "repository": "Milanmg/LLM-RNA-Design-2026",
+    "revision": "609f573b1a373a4f4e6748057c90dcca07e02294",
+    "sha256": "173a94a72035f588dcea2b235f7505c8d6b04c3b06fac43c82f16738bb3bb5e8"
+  },
+  "split_policy": "validation has unique structures; train/validation structures are disjoint; train contains unique (structure,sequence) pairs and may contain multiple sequences per structure",
+  "original_manifest_sha256": "64f979ffef2c9a6c886c3faa8e1a2cc8a1273a2babbb36754e8d68c7cef232b4"
+}

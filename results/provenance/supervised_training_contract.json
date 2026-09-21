@@ -1,0 +1,67 @@
+{
+  "source_receipt_sha256": "5564b689c3d83f3243a0b1853d0e37ee52d3eebbcb668f4346e169615914d322",
+  "source_contract_sha256": "cfe028fe1bf4222d1a728e33401e2d3a7762bb7dac981a2aba3c464afcff7912",
+  "contract": {
+    "allow_tf32": false,
+    "backbone_mode": "full",
+    "code": {
+      "evaluator_script_sha256": "652d5ec4468da16369d7fe6f5676f2c473d978bc2ea77d9c57f6afa80e681642",
+      "model_script_sha256": "993ee6651029850888e9dd734db5a8383a0927a6b79f7223ddb7cbafce398dbb",
+      "repository_revision": "c332d2c9bace0dd586cfbfd119a24c762f8232ce",
+      "train_script_sha256": "b4eda1c7da63d1c56f4b9dac77ee48bebda519be0ce46d7f9ef50e75bc95348f"
+    },
+    "cublas_workspace_config": ":4096:8",
+    "deterministic_algorithms": true,
+    "early_stopping_patience": 2,
+    "effective_batch_size": 128,
+    "gradient_accumulation": 1,
+    "gradient_clip_norm": 1.0,
+    "initialization": null,
+    "injection": "pre",
+    "learning_rate": 1e-05,
+    "lora_alpha": 16.0,
+    "lora_dropout": 0.05,
+    "lora_rank": 0,
+    "method": "pre-backbone-full-dotbracket-x0-flow",
+    "micro_batch_size": 128,
+    "minimum_epochs": 2,
+    "nested_data": {
+      "manifest_sha256": "85ba1a87854508a1eeac81145602152d1fa3148fee5252be3afd9ecd401719de",
+      "prefix_membership_sha256": "a1aa2c3326c01a4c2ba22b9bbe0f017aa4dd4a35af0b5b6b0ff1f49c54829f6e"
+    },
+    "optimizer_foreach": false,
+    "parameterization": "x0",
+    "precision": "bf16",
+    "rnaernie_revision": "df26681ed44bb671b61536c5e2a196d6058a44f7",
+    "rnaernie_weight_sha256": "0321a1402074927e1163027b425ae2d8bd5f26e577c87e51fbc632984eb233d3",
+    "schema_version": 3,
+    "seed": 1009,
+    "selection_order": [
+      "pass_at_8",
+      "best_pair_f1",
+      "best_target_probability",
+      "negative_best_NED",
+      "mfe_at_8",
+      "valid_rate"
+    ],
+    "structure_source": "dotbracket",
+    "thermodynamic_validation": {
+      "candidates": 8,
+      "flow_steps": 50,
+      "seed": 9176,
+      "sha256": "839171d82407d01258b898c6c63ecaba6b82edd2eb6ba5501ae35f62e2359344",
+      "tasks": 48,
+      "viennarna": "2.7.2"
+    },
+    "train_format": "arrow",
+    "train_rows": 10000000,
+    "train_sha256": "0f1e84e2e193790235212e2e747fe436984370a3f7adeecff69c9f3ff26db917",
+    "train_validation_structure_overlap": 0,
+    "weight_decay": 0.01
+  },
+  "selection": {
+    "completed_epochs": 8,
+    "best_epoch": 6,
+    "best_checkpoint_sha256": "8e221cc4c4382a5421890724c0548cf64492fe1be4556d498878e86e83056bc5"
+  }
+}

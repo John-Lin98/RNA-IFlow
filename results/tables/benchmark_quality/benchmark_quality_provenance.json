@@ -1,0 +1,218 @@
+{
+  "source_file": "full_baseline_quality_table.csv",
+  "source_sha256": "b1504d94c4cb21fcd8cc88072c4ef9394a6982a27dd485f95c8a506e357a1c80",
+  "candidate_checks": [
+    {
+      "method": "RNA-IFlow",
+      "benchmark": "eterna100v2",
+      "candidate_file": "RNA-IFlow__eterna100v2.jsonl",
+      "candidate_sha256": "c3e18f53527e237a1bf58e6eb4e2efd8c24f51c9dbebb1fc969c858bcb56e83c",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL",
+      "benchmark": "eterna100v2",
+      "candidate_file": "RNA-Design-LM_SL__eterna100v2.jsonl",
+      "candidate_sha256": "7bf0224ebc45438ef8cee2d3a2d63832b777ba81a9d598d356ba8eb7f46934ba",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-IFlow",
+      "benchmark": "eterna100",
+      "candidate_file": "RNA-IFlow__eterna100.jsonl",
+      "candidate_sha256": "9300461dc40f11171744ee63d88ccb80b025e31a9cbfeb65587c8d00d84f03e4",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL",
+      "benchmark": "eterna100",
+      "candidate_file": "RNA-Design-LM_SL__eterna100.jsonl",
+      "candidate_sha256": "c954bea4491adb21c30e43ac99c99a9ee6bdab1cd93fe663e2f0811379089ffb",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-IFlow",
+      "benchmark": "rfam27",
+      "candidate_file": "RNA-IFlow__rfam27.jsonl",
+      "candidate_sha256": "e6a5badc2d89c23779690ba6667a5300f1130637f29c36953083b04f840cdc6b",
+      "groups": 81,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL",
+      "benchmark": "rfam27",
+      "candidate_file": "RNA-Design-LM_SL__rfam27.jsonl",
+      "candidate_sha256": "763e49b72b96743a9ea9f7eb6db0009088685e78e0f737416bf78088b8f96673",
+      "groups": 81,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-IFlow-RL",
+      "benchmark": "eterna100v2",
+      "candidate_file": "RNA-IFlow-RL__eterna100v2.jsonl",
+      "candidate_sha256": "da6bbcb19272ddae1cd61e56d70cd5610a5987235552972cc53c6c7a0c19b7cb",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-IFlow-RL",
+      "benchmark": "eterna100",
+      "candidate_file": "RNA-IFlow-RL__eterna100.jsonl",
+      "candidate_sha256": "de2ef34efec59fce96abd6d3b3fa07fcfae519888eaa50a3220e44c21dfd9a24",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-IFlow-RL",
+      "benchmark": "rfam27",
+      "candidate_file": "RNA-IFlow-RL__rfam27.jsonl",
+      "candidate_sha256": "1ea869dafe21835baaeeececf7511d356379ec8845f136c9c80af4be1e614969",
+      "groups": 81,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL+RL",
+      "benchmark": "eterna100v2",
+      "candidate_file": "RNA-Design-LM_SLplusRL__eterna100v2.jsonl",
+      "candidate_sha256": "d0aeb3bcbfd16bfc5801c0168ccfc7c9214060b71bd6b11e2824397e6abf5688",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL+RL",
+      "benchmark": "eterna100",
+      "candidate_file": "RNA-Design-LM_SLplusRL__eterna100.jsonl",
+      "candidate_sha256": "db80913ee7ad9d02c9e9d402c0ee7d8316febfe1169dd710fb7016d6ac5ac7bb",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL+RL",
+      "benchmark": "rfam27",
+      "candidate_file": "RNA-Design-LM_SLplusRL__rfam27.jsonl",
+      "candidate_sha256": "25e84688c24ccd0ea92f70b1a4689c4c487d04a894c9ba57db7c0d154bcf9286",
+      "groups": 81,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "GoForth",
+      "benchmark": "eterna100v2",
+      "candidate_file": "GoForth__eterna100v2.jsonl",
+      "candidate_sha256": "4fb872ba59fab57c8d923dafcd52682cdf0ad698aec640e0299b664e9bbb6caf",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "DRAG",
+      "benchmark": "eterna100v2",
+      "candidate_file": "DRAG__eterna100v2.jsonl",
+      "candidate_sha256": "3bf30f1d4df84905b78bc12fbce9bb7c2053e5098f20ae7f4f581fa0ef8a3eb6",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNAinverse-pf",
+      "benchmark": "eterna100v2",
+      "candidate_file": "RNAinverse-pf__eterna100v2.jsonl",
+      "candidate_sha256": "60676d26783b03783ef9978c2b665f7111f9056fb6fce9cf4e49bce32c7ca20a",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "GoForth",
+      "benchmark": "eterna100",
+      "candidate_file": "GoForth__eterna100.jsonl",
+      "candidate_sha256": "38d338c69e211568d2ad21a8bca78864947f111e2eb8a61e2e9bf4184837670b",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "DRAG",
+      "benchmark": "eterna100",
+      "candidate_file": "DRAG__eterna100.jsonl",
+      "candidate_sha256": "3bd46f3a680f4ce6a55f2981d1e060dce8c4dee2db8938e45e2df5faf635dec5",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNAinverse-pf",
+      "benchmark": "eterna100",
+      "candidate_file": "RNAinverse-pf__eterna100.jsonl",
+      "candidate_sha256": "0df0944b0452ccec1b2f80241e044bff4f82ef746de177cc71179f1546f6359e",
+      "groups": 300,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "GoForth",
+      "benchmark": "rfam27",
+      "candidate_file": "GoForth__rfam27.jsonl",
+      "candidate_sha256": "23b9e6cf6a3679e7464a4bbf8b5733f317bfad22993ba9b9abc101edf26cdd3a",
+      "groups": 81,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "DRAG",
+      "benchmark": "rfam27",
+      "candidate_file": "DRAG__rfam27.jsonl",
+      "candidate_sha256": "15b6a12a0156cad1ef177216e3a008771632f1a0a0316f3be9fceee8dbbc5846",
+      "groups": 81,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNAinverse-pf",
+      "benchmark": "rfam27",
+      "candidate_file": "RNAinverse-pf__rfam27.jsonl",
+      "candidate_sha256": "c3726973502bed1410dea9ff97f22792fec5550549eeb7d08d15ef6bfa8ed0dc",
+      "groups": 81,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-IFlow-RL",
+      "benchmark": "rnasolo764",
+      "candidate_file": "RNA-IFlow-RL__rnasolo764.jsonl",
+      "candidate_sha256": "8b8542686f9d934ffcdedbf9572454045485c66b25a1f503c3877cd5ca0b4064",
+      "groups": 2292,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-IFlow",
+      "benchmark": "rnasolo764",
+      "candidate_file": "RNA-IFlow__rnasolo764.jsonl",
+      "candidate_sha256": "a03db70528fc953970191e0ffac76c77dc3698b868ebd792a1d1c00ca93d92c7",
+      "groups": 2292,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL",
+      "benchmark": "rnasolo764",
+      "candidate_file": "RNA-Design-LM_SL__rnasolo764.jsonl",
+      "candidate_sha256": "de42e9eefb5add3894fa45a8fcf0151cb92445187b4087f13bf3c47bf8de5c91",
+      "groups": 2292,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "RNA-Design-LM SL+RL",
+      "benchmark": "rnasolo764",
+      "candidate_file": "RNA-Design-LM_SLplusRL__rnasolo764.jsonl",
+      "candidate_sha256": "4111bbf4990938144ea0eb4d0d74b72a491708578a1821b56d7338cb7933539e",
+      "groups": 2292,
+      "metrics_recomputed": true
+    },
+    {
+      "method": "GoForth",
+      "benchmark": "rnasolo764",
+      "candidate_file": "GoForth__rnasolo764.jsonl",
+      "candidate_sha256": "f1c4fbf06a7199180f0341fbd2aeeb22c0d2e915027d0fd5e21fe1c302023667",
+      "groups": 2292,
+      "metrics_recomputed": true
+    }
+  ],
+  "scope": "P@1/P@8/MFE@1/MFE@8 recomputed; other columns preserved from source, not recomputed",
+  "manuscript_status": "Matches inspected Table 1 snapshot after rounding; latest approval not established",
+  "sd_format": "No SD presentation frozen",
+  "budget_note": "K counts returned candidates; search and neural compute budgets are not matched"
+}

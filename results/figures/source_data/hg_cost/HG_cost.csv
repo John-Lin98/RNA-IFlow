@@ -1,0 +1,10 @@
+axis,value,seconds,scope
+H,1,0.094071819,12 length-stratified targets; K8 inference; shared-card profile
+H,2,0.183071389,12 length-stratified targets; K8 inference; shared-card profile
+H,4,0.35981596,12 length-stratified targets; K8 inference; shared-card profile
+H,8,0.7197074955,12 length-stratified targets; K8 inference; shared-card profile
+H,16,1.4318719365,12 length-stratified targets; K8 inference; shared-card profile
+G,2,25.791790355,"same GPU0/1; original rollout+folding+backward+optimizer, ordinary rollout writes included; loading/checkpoint export excluded; two opposite arm orders; shared GPU profile"
+G,4,27.430107962,"same GPU0/1; original rollout+folding+backward+optimizer, ordinary rollout writes included; loading/checkpoint export excluded; two opposite arm orders; shared GPU profile"
+G,8,39.0917913225,"same GPU0/1; original rollout+folding+backward+optimizer, ordinary rollout writes included; loading/checkpoint export excluded; two opposite arm orders; shared GPU profile"
+G,16,56.9375368815,"same GPU0/1; original rollout+folding+backward+optimizer, ordinary rollout writes included; loading/checkpoint export excluded; two opposite arm orders; shared GPU profile"

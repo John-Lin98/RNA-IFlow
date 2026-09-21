@@ -1,0 +1,9 @@
+{
+  "source_file": "HG_per_seed.csv",
+  "source_sha256": "628468b70f7a6e86f93a06f158b6a9ae6f534e04efd6fb109fd5658d12a167af",
+  "scope": "H/G continuation-seed figure inputs; not main Table 1 SD formatting",
+  "sd": "sample standard deviation, ddof=1",
+  "verification": "All summary hashes and metric values checked; available contract file hashes checked",
+  "missing_contract_references": 8,
+  "limitations": "Some source rows omit contract references; protocol/config closure and latest manuscript mapping remain pending"
+}

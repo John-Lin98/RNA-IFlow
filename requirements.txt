@@ -1,0 +1,7 @@
+torch==2.4.0
+transformers==4.57.1
+numpy==2.2.6
+scipy==1.14.1
+safetensors==0.8.0
+ViennaRNA==2.7.2
+pyarrow==17.0.0

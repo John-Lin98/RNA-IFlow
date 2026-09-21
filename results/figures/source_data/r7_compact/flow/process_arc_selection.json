@@ -1,0 +1,20 @@
+{
+  "target_id": "Ete_29",
+  "target_structure": ".....((((((((..((((....))))..)))).((((..(...)..)))).((((..(..(((.....)))..)..))))))))....................",
+  "window_1based": [
+    38,
+    67
+  ],
+  "local_pairs_zero_based": [
+    [
+      0,
+      10
+    ],
+    [
+      3,
+      7
+    ]
+  ],
+  "rule": "choose at most3 longest internal target pairs with endpoints at least2 positions apart; based on target only, not sequence quality",
+  "column_source": "left is the pretrained predictor run through the same finite policy without RL; not native continuous flow"
+}

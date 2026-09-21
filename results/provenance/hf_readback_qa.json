@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-21",
+  "repository": "jojojoojooo/RNA-IFlow-RL",
+  "revision": "a3ca9b831865d0e499a6f5163e17bde3b154c2cc",
+  "full_package_readback_revision": "774a352f55016ff32012d2936d629b12bd6045dc",
+  "private_verified": true,
+  "fresh_download": true,
+  "sha256_manifest_files_verified": 9,
+  "model_sha256": "8a8dcf74014be2e3ab9571a19facebaad639ca4fd6574bc97d7bdf5d9ffe9f9d",
+  "environment": {"torch": "2.4.0+cpu", "transformers": "4.57.1", "ViennaRNA": "2.7.2", "clean_install": true},
+  "load": "strict full-state load through scripts/load_export.py",
+  "smoke": {"script": "scripts/infer.py", "structure": "(((...)))", "seed": 1009, "temperature": 0.8, "K": 8, "H": 8, "exit_code": 0, "valid_evaluations": 8, "generation_failures": 0},
+  "metadata_update_readback": {"readme_sha256": "615d9093bc0bfd1daf93d52f5791213943a856eb7f0690aaf9eb24f509ca7127", "license": "apache-2.0", "model_lfs_sha256_unchanged": true},
+  "regression_tests": {"command": "python -m unittest discover -s tests -v", "passed": 17},
+  "scope": "Release transport, load and single-target inference only; not full benchmark reproduction or a new scientific result."
+}
