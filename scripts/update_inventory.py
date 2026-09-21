@@ -42,7 +42,8 @@ def main():
             source_revision='release-working-tree', sha256=digest, size=str(len(raw)),
             include_exclude='include', reason='Release-authored artifact; final QA pending'))
         if row['source_path'].startswith('release:'):
-            row.update(sha256=digest, size=str(len(raw)))
+            row.update(sha256=digest, size=str(len(raw)),
+                       reason='Release-authored artifact; QA status in docs/release_checks.md')
         row.update(destination_sha256=digest, destination_size=str(len(raw)))
         rows.append(row)
     output = io.StringIO()
