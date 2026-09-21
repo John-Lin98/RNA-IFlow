@@ -50,6 +50,8 @@ Add `--smoke-first-task` for an explicitly smoke-only run preserving original in
 
 ## Exclusions
 
+The [runtime protocol](runtime_protocol.md) records exact sampler settings, checkpoint hashes, interleaving, synchronization and native-search timeout semantics. Baseline temperatures are not replaced with the RNA-IFlow-RL temperature schedule. Timing execution dependencies remain an explicit release gap.
+
 H/G error bars use sample SD across three continuation training seeds, not the three evaluation-temperature conditions. Reaggregation of 24 rows into eight settings matches the R7 figure inputs. These are figure source data, not an approved Table 1 SD layout. Eight references absent in the source table were resolved through sibling formal-training directories and checked against evaluation scientific-contract hashes, H/G/seed values and terminal receipts. `contract_resolution.json` preserves that additional evidence without rewriting the source table or its initial packaging provenance. Portable experiment recipes and checkpoint-level validation remain separate work.
 
 The benchmark-quality export rechecks candidate SHA, seed/task/K coverage and all four success metrics for every row. Other quality and parameter columns are preserved from the source table and have not been independently recomputed by that packaging script. Eight returned candidates do not imply equal compute budgets between search and neural generators; `compute_budget_matched` is retained explicitly.
