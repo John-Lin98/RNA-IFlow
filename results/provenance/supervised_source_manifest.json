@@ -1,5 +1,19 @@
 [
   {
+    "destination_path": "experiments/supervised_snapshot/rna-flow-fair-components/data_contract.py",
+    "source_path": "experiments/rna-flow-fair-components/data_contract.py",
+    "source_revision": "c332d2c9bace0dd586cfbfd119a24c762f8232ce",
+    "sha256": "a52e1f3b8394fc60600ee8272bb4787f3c931a0439cfc87122a72b48ad952d13",
+    "size": 11741
+  },
+  {
+    "destination_path": "experiments/supervised_snapshot/rna-flow-progressive-supervision-rl/build_contract.py",
+    "source_path": "experiments/rna-flow-progressive-supervision-rl/build_contract.py",
+    "source_revision": "c332d2c9bace0dd586cfbfd119a24c762f8232ce",
+    "sha256": "243e862501fe9de34a4975d44c7f26fcec3aedc751f4e143e1707902bb4387a5",
+    "size": 8655
+  },
+  {
     "destination_path": "experiments/supervised_snapshot/rna-flow-progressive-supervision-rl/build_nested_arrow.py",
     "source_path": "experiments/rna-flow-progressive-supervision-rl/build_nested_arrow.py",
     "source_revision": "c332d2c9bace0dd586cfbfd119a24c762f8232ce",

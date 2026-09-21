@@ -40,7 +40,29 @@ python experiments/supervised_snapshot/rna-flow-progressive-supervision-rl/build
   --source-manifest /path/to/source-manifest.json --output /path/to/fresh-nested-output
 ```
 
-This is a full 10M builder, not a cheap smoke command. Only import/CLI was tested during packaging; the dataset was not rebuilt. Initial 100K split/source-manifest construction and acquisition instructions remain incomplete. `valid_pair` in this builder checks sequence/structure syntax, length and alphabet, not thermodynamic fold correctness.
+This is a full 10M builder, not a cheap smoke command. Only import/CLI was tested during packaging; the dataset was not rebuilt. `valid_pair` in this builder checks sequence/structure syntax, length and alphabet, not thermodynamic fold correctness.
+
+### Prerequisite split and source manifest
+
+The same snapshot now includes `rna-flow-fair-components/data_contract.py` and `rna-flow-progressive-supervision-rl/build_contract.py`. They respectively build the 100K/5K structure-disjoint split and verify the 11 source shards/select thermo48. Their SHA values are in the source manifest; the original base-split contract and output identities are preserved without private paths in `results/provenance/base_split_contract.json`.
+
+```bash
+python experiments/supervised_snapshot/rna-flow-fair-components/data_contract.py \
+  --sl-parquet /path/to/part-00000.parquet \
+  --eterna-v1-dir /path/to/Eterna100V1_inputs --eterna-v2-dir /path/to/Eterna100V2_inputs \
+  --extra-benchmark-jsonl /path/to/public_test_tasks.v1.jsonl \
+  --out /path/to/fresh-base-data --train-count 100000 --validation-count 5000 --seed 1009
+python experiments/supervised_snapshot/rna-flow-progressive-supervision-rl/build_contract.py \
+  --source-shards /path/to/parquet-shards --base-data /path/to/frozen-base-data \
+  --official-code /path/to/RNA-Design-LM --rnaernie /path/to/RNAErnie \
+  --output /path/to/fresh-source-contract --seed 9176 --tasks-per-bin 12
+```
+
+The source verifier pins the RNA-Design-LM code revision and every source-shard hash/row count. Its historic `monitor-only` benchmark label describes that supervised-stage contract only, not the later Eterna selection history disclosed in [datasets](datasets.md).
+
+**Byte-level reproduction caveat:** the original split builder iterates a Python set before shuffling validation rows. A synthetic check with identical seed 1009 but `PYTHONHASHSEED=1` versus `2` produced the same training rows and validation membership but different validation row order. The original process hash seed is not established. Do not claim that `--seed 1009` alone reconstructs the historical validation JSONL SHA. Preserve the original frozen split or establish exact ordering before claiming byte-level reproduction; no historical split is silently rewritten. The downstream thermo48 selector ranks by a stable content hash, but this does not retroactively make the original validation file ordering deterministic.
+
+These source restorations do not resolve source acquisition/redistribution permissions or the exact extra-exclusion asset. Full data pipeline execution has not been rerun for the release.
 
 ## RL continuation boundaries
 
