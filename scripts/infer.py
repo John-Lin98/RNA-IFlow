@@ -9,7 +9,7 @@ from load_export import load_export
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'experiments/rna-flow-progressive-supervision-rl'))
 from endpoint_policy import rollout_discrete_domino_trajectory, endpoint_units
-from evaluate import evaluate_candidate
+from paper_metrics import evaluate_candidate
 
 
 def main():
