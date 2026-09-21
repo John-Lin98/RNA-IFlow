@@ -18,7 +18,7 @@ All main results use seed/temperature pairs `(1009, 0.8)`, `(2027, 1.0)`, `(3037
 |---|---|---|---|
 | Main-model benchmark rows: Eterna100-v2, Eterna100, Rfam-Taneda-27, RNAsolo-764 | `experiments/rna-flow-fair-components/evaluate.py`; `scripts/aggregate_main_results.py` | `results/provenance/main_evaluation_receipts.json`; HF `evaluation_protocol.json` | `results/tables/main_model_metrics.csv`; `results/tables/per_condition_metrics.csv` |
 | Table 1 benchmark comparisons and RNAsolo supplement (snapshot mapping; latest approval pending) | `scripts/package_benchmark_table.py`; individual baseline generation adapters still to be packaged | Candidate SHA and reaggregation checks in `results/tables/benchmark_quality/benchmark_quality_provenance.json` | `results/tables/benchmark_quality/benchmark_quality.csv` (26 rows, no SD formatting) |
-| Table 2 resident neural runtime rows | `scripts/aggregate_resident_runtime.py`; original timing execution adapter still to be packaged | Ledger and summary SHA plus measurement plan in `results/tables/resident_runtime/provenance.json` | `results/tables/resident_runtime/resident_runtime.csv` (five methods; excludes native-search rows) |
+| Table 2 resident neural runtime rows | `scripts/measure_resident_runtime.py`; `runtime_samplers.py`; `aggregate_resident_runtime.py` | Frozen asset/candidate SHA, five-model resident protocol, ledger and summary SHA in `results/tables/resident_runtime/provenance.json`; portable runner CUDA preflight pending | `results/tables/resident_runtime/resident_runtime.csv` (five methods; excludes native-search rows) |
 | Appendix RNAsolo exact-overlap sensitivity | `scripts/package_overlap_sensitivity.py --source /path/to/historical-sensitivity --tables /path/to/task-condition-tables --output /path/to/fresh-summary` | Historical overlap/result receipt hashes, excluded IDs/structure hashes, five task-condition source hashes; no new SFT scan | `results/tables/rnasolo_overlap/sensitivity.csv`; `provenance.json` (15 rows; full764 remains primary) |
 | Table 2 native-search runtime rows | `scripts/aggregate_native_runtime.py`; portable `scripts/measure_inverse_runtime.py`; DRAG wrapper pending | Summary/plan SHA and failure semantics in `results/tables/native_runtime/provenance.json`; [execution protocol](runtime_protocol.md) | `results/tables/native_runtime/native_runtime.csv` |
 | H/G sensitivity figure inputs (R7 source package; final manuscript mapping pending) | `scripts/package_hg_source_data.py`; `scripts/resolve_hg_contracts.py` | 24 summary hashes; all 24 contracts and terminal receipts verified, including eight references resolved separately | `results/figures/source_data/hg/HG_per_seed.csv`; `HG_mean_sd.csv`; `contract_resolution.json` |
@@ -30,6 +30,24 @@ All main results use seed/temperature pairs `(1009, 0.8)`, `(2027, 1.0)`, `(3037
 | Independent inference export validation (engineering, not a paper result) | `scripts/export_model.py`; `scripts/check_portable_equivalence.py`; `scripts/load_export.py` | HF `export_manifest.json` and model SHA | 223 tensor states equal; fixed mini-batch max absolute output difference 0 |
 
 ## Reaggregate main-model results
+
+### Render H/G sensitivity panels
+
+```bash
+pip install -r requirements-figures.txt
+python scripts/render_hg_panels.py --output /path/to/fresh-figure-output
+```
+
+The renderer produces Figure 2(d,e) PDF/PNG panels from the packaged H/G quality
+and cost CSVs, with input/output hashes in `render_manifest.json`. Geometry,
+colors, axis ranges and error-bar layering follow the R7 plotting source;
+DejaVu Sans replaces Arial for portability, so pixel identity is not claimed.
+Error bars remain sample SD over three continuation training seeds. Both panels
+have been rendered in the independent CPU environment and visually checked for
+legible labels and visible error bars. This is not the complete Figure 2, a new
+experiment or approval of the final manuscript layout.
+
+### Main-model aggregate tables
 
 Given normalized candidate files named `RNA-IFlow-RL__<benchmark>.jsonl`, run:
 

@@ -6,7 +6,7 @@ Paper and method figure: forthcoming.
 
 This private repository is being prepared for reproducible paper release. The release branch is work in progress, not yet a validated public release.
 
-Main model: [RNA-IFlow-RL on Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow-RL) (private). The U2442 inference export is uploaded; independent download verification is pending. See [model reference](model/README.md).
+Main model: [RNA-IFlow-RL on Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow-RL) (private). The U2442 inference export is uploaded; an independent fresh download, SHA verification, strict load and K8 CPU smoke passed. See [model reference](model/README.md).
 
 ## Installation and inference
 
@@ -36,7 +36,7 @@ U2442; arithmetic mean over seed/temperature conditions `(1009, 0.8)`, `(2027, 1
 See [experiment map](docs/experiments.md), [training recipe](docs/training.md), and [dataset limitations](docs/datasets.md) for reproduction boundaries. Eterna100-v2 participated in historical model selection; RNAsolo-764 includes nine target structures overlapping SFT. No datasets or model binaries are stored in GitHub.
 
 - `experiments/`: source implementation and its dependency closure.
-- `scripts/`: export, portable inference, equivalence checks, and aggregation.
+- `scripts/`: export, portable inference/evaluation, training entrypoints, runtime reproduction, figure rendering and aggregation.
 - `results/tables/`: compact main-model and per-condition results.
 - `results/provenance/`: contracts and evaluation receipts.
 - `docs/`, `model/`: reproduction and model references.

@@ -41,6 +41,28 @@ and hashes. Original execution source SHA256 was rechecked:
 `aa4c2e13e02ec2b9b8f0b745281acc535e001f8eba8a37eb2f08911a579c161e`.
 See `scripts/aggregate_resident_runtime.py --help` for source-aggregation inputs.
 
+The portable execution entrypoint is:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python scripts/measure_resident_runtime.py \
+  --repo-root . --gpu 0 \
+  --benchmark /path/to/eterna100v2.jsonl \
+  --candidate-root /path/to/frozen-candidate-ledgers \
+  --sft-checkpoint /path/to/checkpoint-best-epoch-0006.pt \
+  --rnaernie /path/to/rnaernie-snapshot \
+  --rl-model /path/to/downloaded-u2442-export \
+  --rna-dlm-root /path/to/model-directory-containing-SL-and-SL+RL \
+  --goforth-root /path/to/GoForth-source \
+  --output /path/to/fresh-runtime-attempt
+```
+
+Add `--preflight` for the frozen first and longest target. Formal settings retain
+two repetitions and four scoring workers. The runner SHA-checks benchmark,
+candidate ledgers and weights, hashes baseline metadata/external source, holds all
+five residents under `torch.inference_mode()`, performs exact warmup/candidate
+identity checks, and writes only to a fresh output. CPU tests cover orchestration
+and failure semantics; they are not a substitute for the real-model CUDA preflight.
+
 ## Native-search supplement
 
 Native time includes required process/model setup and internal folding; subsequent
