@@ -33,7 +33,7 @@ U2442; arithmetic mean over seed/temperature conditions `(1009, 0.8)`, `(2027, 1
 
 ## Reproduction and layout
 
-See [experiment map](docs/experiments.md) and [training recipe](docs/training.md) for entrypoints and current reproduction boundaries. No datasets or model binaries are stored in GitHub.
+See [experiment map](docs/experiments.md), [training recipe](docs/training.md), and [dataset limitations](docs/datasets.md) for reproduction boundaries. Eterna100-v2 participated in historical model selection; RNAsolo-764 includes nine target structures overlapping SFT. No datasets or model binaries are stored in GitHub.
 
 - `experiments/`: source implementation and its dependency closure.
 - `scripts/`: export, portable inference, equivalence checks, and aggregation.

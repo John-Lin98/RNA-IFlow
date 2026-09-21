@@ -10,6 +10,8 @@ HF package: [jojojoojooo/RNA-IFlow-RL](https://huggingface.co/jojojoojooo/RNA-IF
 
 The [method implementation map](methods.md) identifies FPM, SPD and TTR functions and distinguishes logical updates, optimizer steps, training group size and inference candidate budget.
 
+See [dataset limitations](datasets.md) before interpreting these results: Eterna100-v2 participated in historical selection, and RNAsolo-764 has nine exact target structures overlapping SFT. Main values and benchmark membership remain unchanged; they are not claimed to establish untouched-test generalization.
+
 All main results use seed/temperature pairs `(1009, 0.8)`, `(2027, 1.0)`, `(3037, 1.2)`, eight candidates per task and condition, eight transition steps, and ViennaRNA 2.7.2. Pass@k uses `uMFE_hit`; MFE@k uses `mfe_hit`. Averages across these conditions do not establish training-seed uncertainty. No unapproved SD table format is frozen.
 
 | Paper asset | Code | Config / evidence | Result |
