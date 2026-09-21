@@ -62,3 +62,23 @@ See `scripts/aggregate_native_runtime.py` and
 `175dd6f32085e3fa8d24f9cb7484e36f16d63ce1204ddd39ddc9b3135b2463f2`.
 External wrappers, upstream revisions, environments and redistribution permissions
 must still be resolved before claiming turnkey timing reproduction.
+
+### Portable RNAinverse-pf entrypoint
+
+```bash
+python scripts/measure_inverse_runtime.py --tasks /path/to/eterna100v2.jsonl --output /path/to/fresh-native-run
+```
+
+The input is SHA-bound to the benchmark above; output must not exist. This command
+runs 300 groups with four CPU workers and is not a quick smoke. Add
+`--smoke-first-task` for only the first target and first condition (still eight
+native calls). No GPU is used. The original random-start rule, eight isolated
+sequential calls per group, 45-second candidate timeout and failed-slot denominators
+are retained. Child or scorer exceptions abort without a completion summary.
+
+Post-scoring uses the corrected paper NED rather than the historical timing script's
+extra-normalized NED; this does not change native search generation or its timed
+boundary. The portable script records that difference. Unit tests cover eight-call
+execution, deterministic start hashes, timeout slots and child errors. A real
+ViennaRNA 2.7.2 nine-nucleotide child smoke passed; full benchmark timing has not
+been rerun, and no new performance/accuracy result is claimed.
