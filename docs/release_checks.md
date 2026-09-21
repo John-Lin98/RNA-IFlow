@@ -20,15 +20,18 @@ Installed direct-dependency version and license-file evidence is recorded in `re
 
 ## Manuscript and timing
 
-The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. The latest manuscript approval is not established.
+The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. A later USTC manuscript workspace refers to a fixed-T1 replacement protocol, while this release is explicitly frozen to the original three-temperature protocol. No silent protocol switch is made; the authors must choose the final public-facing version.
 
 The Table 2 resident-model timing source has been reaggregated from 3,000 timing records: median across two repeats within each task/condition, then median across 300 groups. RNA-IFlow-RL is 0.73166435575 s/K8 and RNA-IFlow is 0.88450397525 s/K8, matching the displayed 0.73/0.88. See `results/tables/resident_runtime/`. Native-search runtime is packaged separately with failure counts retained; resident neural timing excludes setup/warmup and later scoring. The portable five-model execution entrypoint is `scripts/measure_resident_runtime.py`; its real-model GPU equivalence preflight remains distinct from CPU orchestration tests.
 
-## Remaining release gates
+## Current release gates
 
-- HF fresh-download SHA and strict-load/K8 smoke passed; evidence is in `results/provenance/hf_readback_qa.json`. Full benchmark reproduction remains separate.
-- Remaining paper figure/source and approved baseline/ablation mapping closure.
-- Portable full-benchmark reproduction (clean CPU installation and minimal inference have passed).
-- Latest approved manuscript reconciliation and approved citation metadata.
-- Rights-holder license decision and third-party redistribution audit.
-- Final secret/size scan, Chinese PR and review, clean committed release branch.
+Completed engineering gates: HF fresh-download SHA and strict-load/K8 smoke; clean-environment installation and 17 CPU regression tests; compact table/figure source packaging with provenance; paper-only inventory; final tracked-file path/secret/size scan; clean pushed release branch; and a Chinese Draft PR. Full benchmark or CUDA timing reruns remain optional reproduction strengthening and are not represented as completed experiments.
+
+Publication remains blocked only on decisions that cannot be inferred from source files:
+
+- author/rights-holder choice of the root code license and approval of third-party/model/data redistribution terms;
+- final author list and citation metadata;
+- final manuscript protocol choice between this task's frozen three-temperature results and the later fixed-T1 draft.
+
+Until those decisions are supplied, GitHub and Hugging Face remain private, the PR remains Draft, and no LICENSE or CITATION metadata is invented.
