@@ -7,7 +7,7 @@ import sys
 
 import RNA
 import torch
-from load_export import load_export
+from load_export import load_export, MODEL_SHA256, CONFIG_SHA256
 from paper_metrics import evaluate_candidate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,7 +17,7 @@ from evaluate import aggregate, atomic_json, global_task_seed, valid_pair_fracti
 
 CONDITIONS = {1009: .8, 2027: 1., 3037: 1.2}
 COUNTS = {'eterna100v2': 100, 'eterna100': 100, 'rfam27': 27, 'rnasolo764': 764}
-MODEL_SHA = '8a8dcf74014be2e3ab9571a19facebaad639ca4fd6574bc97d7bdf5d9ffe9f9d'
+MODEL_SHA = MODEL_SHA256
 
 
 def read_benchmark(path, name):
@@ -56,7 +56,8 @@ def main():
     model = load_export(args.model, args.device)
     args.output.mkdir(parents=True, exist_ok=False)
     protocol = dict(benchmark=args.benchmark, benchmark_sha256=benchmark_sha,
-                    model_sha256=MODEL_SHA, conditions=CONDITIONS, candidates=8, steps=8,
+                    model_sha256=MODEL_SHA, config_sha256=CONFIG_SHA256,
+                    conditions=CONDITIONS, candidates=8, steps=8,
                     seed_mapping='condition_seed + original_task_index * 1000003',
                     scope='smoke' if args.smoke_first_task else 'benchmark_reproduction',
                     viennarna=RNA.__version__, tasks=len(tasks),

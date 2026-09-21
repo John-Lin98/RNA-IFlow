@@ -13,3 +13,5 @@ Hugging Face: https://huggingface.co/jojojoojooo/RNA-IFlow-RL （private）。
 223 个张量逐项相等，固定双样本 CPU 输出差异为 0。权重已上传到 revision `774a352f55016ff32012d2936d629b12bd6045dc`，大小为 350239076 bytes。独立 fresh download 后，模型及 8 个元数据文件均通过下载包内的 SHA256 清单校验。下载包已在全新 CPU 环境严格加载并完成 K=8 单目标推理与 ViennaRNA 评分；这是发布链路 smoke，不是完整 benchmark 重跑。详见 `results/provenance/hf_readback_qa.json`。
 
 使用方法见 [推理文档](../docs/inference.md)。许可证仍待完整核验，仓库与模型均不得擅自公开。
+
+加载器同时固定权重与配置身份。对应上述 HF revision 的 `config.json` SHA256 为 `fd84cd17150e1ad1d9e756a05a78dc13c24463ac27bcf4c771e5c7e8f07375fb`，仓内参考副本为 `configs/u2442.json`。任何配置字节变更（包括可保持张量形状但改变输出的激活函数）均被拒绝；不能只保留权重 SHA 就声称仍为已验收主模型。

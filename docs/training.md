@@ -29,7 +29,20 @@ Arrow fields are `sequence` and `target_structure`. The nested manifest authoriz
 
 The supervised snapshot intentionally retains the historical scorer, including its extra length normalization of ensemble defect, because it participated in checkpoint selection. Do not use it to produce paper quality tables. Paper-facing evaluation uses `scripts/paper_metrics.py` and the corrected NED convention. This distinction preserves training provenance without silently rewriting historical selection.
 
-## RL boundaries
+## Nested Arrow construction
+
+The original `build_nested_arrow.py` is now preserved alongside the supervised trainer, with SHA256 `d638b83175dd92993fd89f856376de138d10e0aa9c21e3b5f8119a7e582c17ac`, matching both the original Git blob and the audited source copy. It verifies the shard set, hashes and row counts before building the nested prefixes. Run only after acquiring the authorized original inputs:
+
+```bash
+python experiments/supervised_snapshot/rna-flow-progressive-supervision-rl/build_nested_arrow.py \
+  --source-shards /path/to/parquet-shards --base-train /path/to/train100k.jsonl \
+  --validation /path/to/validation5000.jsonl --eterna100v2 /path/to/eterna100v2.jsonl \
+  --source-manifest /path/to/source-manifest.json --output /path/to/fresh-nested-output
+```
+
+This is a full 10M builder, not a cheap smoke command. Only import/CLI was tested during packaging; the dataset was not rebuilt. Initial 100K split/source-manifest construction and acquisition instructions remain incomplete. `valid_pair` in this builder checks sequence/structure syntax, length and alphabet, not thermodynamic fold correctness.
+
+## RL continuation boundaries
 
 The main RL implementation remains outside `supervised_snapshot/`. See [methods](methods.md) and `results/provenance/contract.json` for the finite-policy settings. Scaled C3 starts from U96 policy weights with fresh optimizer state; later C3+D5 segments perform exact continuation. Their validators require matching source checkpoint, receipt, contract, optimizer manifest, per-rank RNG and task coverage. A safetensors inference export is not an exact-resume checkpoint and cannot satisfy these requirements.
 

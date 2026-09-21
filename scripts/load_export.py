@@ -11,10 +11,23 @@ FAIR = Path(__file__).resolve().parents[1] / 'experiments/rna-flow-fair-componen
 sys.path.insert(0, str(FAIR))
 from model import FairRNAFlow
 
+MODEL_SHA256 = '8a8dcf74014be2e3ab9571a19facebaad639ca4fd6574bc97d7bdf5d9ffe9f9d'
+CONFIG_SHA256 = 'fd84cd17150e1ad1d9e756a05a78dc13c24463ac27bcf4c771e5c7e8f07375fb'
+
+
+def parse_config(raw):
+    """Bind architecture to the independently verified U2442 HF package."""
+    if hashlib.sha256(raw).hexdigest() != CONFIG_SHA256:
+        raise ValueError('U2442 config SHA256 mismatch')
+    return json.loads(raw)
+
 
 def load_export(directory, device='cpu'):
     directory = Path(directory)
     manifest = json.loads((directory / 'export_manifest.json').read_text())
+    if manifest['model_sha256'] != MODEL_SHA256:
+        raise ValueError('This loader is frozen to the U2442 inference export')
+    config = parse_config((directory / 'config.json').read_bytes())
     weights = directory / 'model.safetensors'
     with weights.open('rb') as stream:
         h = hashlib.sha256()
@@ -22,7 +35,6 @@ def load_export(directory, device='cpu'):
             h.update(chunk)
     if h.hexdigest() != manifest['model_sha256']:
         raise ValueError('Export weight SHA256 mismatch')
-    config = json.loads((directory / 'config.json').read_text())
     model = FairRNAFlow('', **config['model_args'], backbone_config=config['backbone_config'])
     model.load_state_dict(load_file(str(weights)), strict=True)
     return model.to(device).eval()
