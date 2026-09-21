@@ -1,0 +1,81 @@
+{
+  "primary_protocol": "full764 unchanged; three frozen seed/temperature conditions, K8",
+  "scope": "Posthoc descriptive exact-structure sensitivity, not outcome-based filtering",
+  "verification": "Five task-condition file hashes, complete coverage, all eight aggregate metrics",
+  "not_repeated": "10M-row SFT scan, large Arrow SHA, candidate generation and thermodynamic scoring",
+  "historical_receipt_sha256": "a1eb5c6ea5e2cc77d6d86b86588405efb9d2bf5422ed5cef06ab52ec2fa8cf28",
+  "historical_results_sha256": "32d46c7241b84ab837ee7041a261787664c4b729131b70ed92cb78b30662be04",
+  "historical_overlap_sha256": "0d80e967f5279927966e52723575aa044f85ed2d5663e5048645acfc893a775c",
+  "benchmark_sha256": "410ae7c9df3894e39770e7d1798f92321bef26a7325ba7e943a225133da029a0",
+  "sft_arrow_sha256_inherited": "0f1e84e2e193790235212e2e747fe436984370a3f7adeecff69c9f3ff26db917",
+  "overlap_definition": "exact full target dot-bracket; no sequence/family-homology audit",
+  "overlap_targets": [
+    {
+      "task_id": "6",
+      "sft_matching_rows": 10,
+      "structure_sha256": "7f821988503e79585e1799919f9d66abc08e9a46ae557ee1ff5ddd296bde991b"
+    },
+    {
+      "task_id": "12",
+      "sft_matching_rows": 10,
+      "structure_sha256": "0e8fb64100b4a777a0382bcd690b07bacdca5ff24390b77ebe950c0a57e53962"
+    },
+    {
+      "task_id": "15",
+      "sft_matching_rows": 10,
+      "structure_sha256": "c824c6bbe449a0fa7eddd64a68c7840838f8d4c3ee781afbdc9d4f58e43b77a3"
+    },
+    {
+      "task_id": "22",
+      "sft_matching_rows": 10,
+      "structure_sha256": "a2ce86affa68b83fd8e9903ee24097b41bb92639d6632c4acc4ddad6646e2a09"
+    },
+    {
+      "task_id": "23",
+      "sft_matching_rows": 10,
+      "structure_sha256": "8d6a3e2adc67c46117a57c957266370fe03d6e6aa213f0484094f004c2c23036"
+    },
+    {
+      "task_id": "24",
+      "sft_matching_rows": 10,
+      "structure_sha256": "af9a45a4aaa434a5613d4b84db86b3cbc843e4afb6b275395d85d164601bff92"
+    },
+    {
+      "task_id": "34",
+      "sft_matching_rows": 10,
+      "structure_sha256": "293124488a2c6288dc42dbbb848544be30fba822e2ec9b28d2e49f3eafec1b34"
+    },
+    {
+      "task_id": "85",
+      "sft_matching_rows": 10,
+      "structure_sha256": "5b3a03d7caf56a8f42455417c037a8dc5bd22fa01e37f0ed9e7a3e9eaceeb208"
+    },
+    {
+      "task_id": "124",
+      "sft_matching_rows": 10,
+      "structure_sha256": "73603b32aa5c0d021bdb44ead8258bc0f9e58b8be3446b13e9a6ef33a641fda5"
+    }
+  ],
+  "sources": [
+    {
+      "source_file": "GoForth__rnasolo764/task_seed.jsonl",
+      "sha256": "0849f2fb3c36e25b2e7d6c79d24e0e60cd0bf28db84f2d6dc4a3a01ade6b02cc"
+    },
+    {
+      "source_file": "RNA-Design-LM_SL__rnasolo764/task_seed.jsonl",
+      "sha256": "92278cbf6e9c7fe2096fa03b7b49843921a96e37542dfdd1f089805e3575032b"
+    },
+    {
+      "source_file": "RNA-Design-LM_SLplusRL__rnasolo764/task_seed.jsonl",
+      "sha256": "46a679ec0504da96e1c419ea2b88f236956ad127dcabc3195f8a41e3ff0827ac"
+    },
+    {
+      "source_file": "RNA-IFlow__rnasolo764/task_seed.jsonl",
+      "sha256": "d67e300c8901f1ae6613ab8c001b0a769a5cfc496455f31b6f4b2df0714f2e96"
+    },
+    {
+      "source_file": "RNA-IFlow-RL__rnasolo764/task_seed.jsonl",
+      "sha256": "d6330010ee52ebc0f1f907d1b226ec3e0f591d3c3fd31f3c6ab0d790e29c48ad"
+    }
+  ]
+}
