@@ -16,6 +16,8 @@ Run `python scripts/update_inventory.py` from any directory. It indexes only tra
 
 No root LICENSE exists in the inspected authoritative source revision. A license for the new project cannot be inferred from dependency licenses or repository ownership. The RNAErnie model card declares Apache-2.0 metadata, but this alone does not complete the code, dataset, or derived-weight redistribution review. Author/rights-holder approval and third-party notices remain required. No LICENSE is invented, and no redistribution permission is asserted.
 
+Installed direct-dependency version and license-file evidence is recorded in `results/provenance/direct_dependency_licenses.json`; see [third-party scope](third_party.md). This is a partial evidence ledger, not a completed compatibility or redistribution audit.
+
 ## Manuscript and timing
 
 The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. The latest manuscript approval is not established.
