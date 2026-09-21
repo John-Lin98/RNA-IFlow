@@ -14,13 +14,11 @@ Run `python scripts/update_inventory.py` from any directory. It indexes only tra
 
 ## License
 
-No root LICENSE exists in the inspected authoritative source revision. A license for the new project cannot be inferred from dependency licenses or repository ownership. The RNAErnie model card declares Apache-2.0 metadata, but this alone does not complete the code, dataset, or derived-weight redistribution review. Author/rights-holder approval and third-party notices remain required. No LICENSE is invented, and no redistribution permission is asserted.
-
-Installed direct-dependency version and license-file evidence is recorded in `results/provenance/direct_dependency_licenses.json`; see [third-party scope](third_party.md). This is a partial evidence ledger, not a completed compatibility or redistribution audit.
+The rights holder selected Apache-2.0 for this project. The complete license is stored in the root `LICENSE`, and `CITATION.cff` records the approved Chinese author order. Installed direct-dependency version and license-file evidence is recorded in `results/provenance/direct_dependency_licenses.json`; see [third-party scope](third_party.md). Dependencies and datasets are not bundled or relicensed by this repository.
 
 ## Manuscript and timing
 
-The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. A later USTC manuscript workspace refers to a fixed-T1 replacement protocol, while this release is explicitly frozen to the original three-temperature protocol. No silent protocol switch is made; the authors must choose the final public-facing version.
+The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. The official protocol is fixed to seed/temperature pairs `(1009, 0.8)`, `(2027, 1.0)`, and `(3037, 1.2)`, K=8, with ViennaRNA 2.7.2.
 
 The Table 2 resident-model timing source has been reaggregated from 3,000 timing records: median across two repeats within each task/condition, then median across 300 groups. RNA-IFlow-RL is 0.73166435575 s/K8 and RNA-IFlow is 0.88450397525 s/K8, matching the displayed 0.73/0.88. See `results/tables/resident_runtime/`. Native-search runtime is packaged separately with failure counts retained; resident neural timing excludes setup/warmup and later scoring. The portable five-model execution entrypoint is `scripts/measure_resident_runtime.py`; its real-model GPU equivalence preflight remains distinct from CPU orchestration tests.
 
@@ -28,10 +26,4 @@ The Table 2 resident-model timing source has been reaggregated from 3,000 timing
 
 Completed engineering gates: HF fresh-download SHA and strict-load/K8 smoke; clean-environment installation and 17 CPU regression tests; compact table/figure source packaging with provenance; paper-only inventory; final tracked-file path/secret/size scan; clean pushed release branch; and a Chinese Draft PR. Full benchmark or CUDA timing reruns remain optional reproduction strengthening and are not represented as completed experiments.
 
-Publication remains blocked only on decisions that cannot be inferred from source files:
-
-- author/rights-holder choice of the root code license and approval of third-party/model/data redistribution terms;
-- final author list and citation metadata;
-- final manuscript protocol choice between this task's frozen three-temperature results and the later fixed-T1 draft.
-
-Until those decisions are supplied, GitHub and Hugging Face remain private, the PR remains Draft, and no LICENSE or CITATION metadata is invented.
+The project license, author order and official evaluation protocol are now approved. English author names, affiliations and ORCIDs remain a metadata refinement rather than a code-release blocker. GitHub and Hugging Face remain private until explicit publication approval.

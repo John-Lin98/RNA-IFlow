@@ -9,6 +9,5 @@ data hashes, and hashes of referenced training/evaluation summaries. Candidate-
 level distributions, raw hits and already rendered binaries are intentionally
 excluded because they are duplicate or nonessential release assets.
 
-The package follows this repository's frozen mixed-temperature protocol. It is
-not a fixed-T1 result package and does not approve final manuscript numbering or
-layout.
+The package follows this repository's official three-condition evaluation
+protocol and does not approve final manuscript numbering or layout.

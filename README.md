@@ -29,7 +29,7 @@ The model directory must contain the HF package, including its config and export
 | Rfam-Taneda-27 | 0.8518519 | 0.8765432 |
 | RNAsolo-764 | 0.7120419 | 0.7312391 |
 
-U2442; arithmetic mean over seed/temperature conditions `(1009, 0.8)`, `(2027, 1.0)`, `(3037, 1.2)`, K=8, ViennaRNA 2.7.2. Pass uses the unique-MFE success indicator. These are evaluation conditions, not independent training seeds. Source CSVs are in `results/tables/`; original evaluation receipt provenance is in `results/provenance/`. These values match the frozen release specification; latest approved manuscript reconciliation remains pending.
+U2442; arithmetic mean over seed/temperature conditions `(1009, 0.8)`, `(2027, 1.0)`, `(3037, 1.2)`, K=8, ViennaRNA 2.7.2. Pass uses the unique-MFE success indicator. These are evaluation conditions, not independent training seeds. Source CSVs are in `results/tables/`; original evaluation receipt provenance is in `results/provenance/`. These are the official evaluation results for this release.
 
 ## Reproduction and layout
 
@@ -43,6 +43,6 @@ See [experiment map](docs/experiments.md), [training recipe](docs/training.md), 
 
 ## Citation and license
 
-Paper link, final author list, and citation metadata will be added after approval; no provisional authorship or venue is asserted.
+The current author order is 林泽丰, 方贤勇, 符天凡, 徐小华. See [`CITATION.cff`](CITATION.cff); English names, affiliations and ORCIDs will be aligned with the final paper metadata.
 
-Licensing and third-party redistribution review are in progress. No public release or redistribution permission is asserted by this scaffold.
+The project is licensed under the [Apache License 2.0](LICENSE). Third-party dependencies and datasets remain subject to their own terms; no datasets are redistributed here.

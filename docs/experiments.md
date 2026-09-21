@@ -6,7 +6,7 @@ This map records verified assets without substituting engineering smoke tests fo
 
 Checkpoint: C3+D5 U2442, original SHA256 `198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8`.
 
-HF package: [jojojoojooo/RNA-IFlow-RL](https://huggingface.co/jojojoojooo/RNA-IFlow-RL/tree/774a352f55016ff32012d2936d629b12bd6045dc), private. Independent fresh-download SHA, strict load and clean-environment inference smoke passed; see `results/provenance/hf_readback_qa.json`.
+HF package: [jojojoojooo/RNA-IFlow-RL](https://huggingface.co/jojojoojooo/RNA-IFlow-RL/tree/a3ca9b831865d0e499a6f5163e17bde3b154c2cc), private. Independent fresh-download SHA, strict load and clean-environment inference smoke passed; see `results/provenance/hf_readback_qa.json`.
 
 The [method implementation map](methods.md) identifies FPM, SPD and TTR functions and distinguishes logical updates, optimizer steps, training group size and inference candidate budget.
 
@@ -82,8 +82,8 @@ Native-search timing includes necessary setup/internal search and retains failed
 
 Composition source labels are preserved: `Original mix`, `Core-only`, and `Hard-enriched` (paper display labels: Original mix, Easy, Easy + Hard). The learnability-selected core is not an original-membership subset: only 1,237 of its 2,790 IDs overlap the original mix. Do not relabel that category as "original members." Each condition contains 2,790 targets, and counts/fractions and corrected summary metrics were verified. Full training-recipe and final figure-rendering closure remain pending.
 
-U2790 is plateau evidence only, not the main checkpoint. Fixed-T1 results, historical failed runs, raw result trees, structure caches, private operational logs, and duplicate checkpoints are excluded from this release. Benchmark redistribution and third-party model licensing must be resolved before public publication.
+U2790 is plateau evidence only, not the main checkpoint. Historical failed runs, raw result trees, structure caches, private operational logs, duplicate checkpoints and non-official evaluation outputs are excluded from this release. Benchmark data are not redistributed.
 
 The late-checkpoint curve contains U1744, U2093, U2442 and U2790, reaggregated from 9,600 original candidate records without rerunning inference. All four use the frozen multi-temperature protocol, H8, K8 and ViennaRNA 2.7.2. The curve does not select a new checkpoint: U2442 remains the main model even when another point has a larger observed score. Candidate sequences are not duplicated in the release; per-file hashes support traceability. The broader historical early curve is not included here: its update-zero point is an already-trained U96 policy, not supervised-only weights. Final figure rendering and the separate on-policy training-reward curve remain pending.
 
-The `r7_compact` package preserves only compact data needed to reconstruct four additional R7 figure families. It verifies the immutable R7 delivery manifest and every referenced source digest, then removes operational absolute paths. These assets retain the frozen mixed-temperature diagnostic provenance used by this repository; they are not evidence for, or a silent replacement with, the later fixed-T1 draft protocol. Final numbering and public-facing layout still require manuscript-owner approval.
+The `r7_compact` package preserves only compact data needed to reconstruct four additional R7 figure families. It verifies the immutable R7 delivery manifest and every referenced source digest, then removes operational absolute paths. These assets use the official three-condition evaluation protocol. Final numbering and public-facing layout still require manuscript-owner approval.
