@@ -5,15 +5,15 @@
     {
       "package": "torch",
       "required_version": "2.4.0",
-      "installed_version": "2.4.0+cpu",
+      "installed_version": "2.4.0",
       "license_expression": null,
       "license_classifiers": [
         "License :: OSI Approved :: BSD License"
       ],
       "license_files": [
         {
-          "distribution_relative_path": "torch-2.4.0+cpu.dist-info/LICENSE",
-          "sha256": "605a7dd8648cf774e407b2fef9a09ce4271bc45b692e18d5bd047b268c2d8768"
+          "distribution_relative_path": "torch-2.4.0.dist-info/LICENSE",
+          "sha256": "3495e973ebd5ede690a09f8b2b63905f2533059aa09f5b12e9b5f7cd56b0e2d1"
         }
       ]
     },
@@ -34,28 +34,28 @@
     },
     {
       "package": "numpy",
-      "required_version": "2.2.6",
-      "installed_version": "2.2.6",
+      "required_version": "1.26.4",
+      "installed_version": "1.26.4",
       "license_expression": null,
       "license_classifiers": [
         "License :: OSI Approved :: BSD License"
       ],
       "license_files": [
         {
-          "distribution_relative_path": "numpy-2.2.6.dist-info/LICENSE.txt",
-          "sha256": "c002bd26de7dc7aa464250a0de063d58fe55974452e4389e5c21c350a820bf06"
+          "distribution_relative_path": "numpy-1.26.4.dist-info/LICENSE.txt",
+          "sha256": "e261222a74adff28f88160dac1c5cb302d93b67e9ca989eb83bf311e11a9970a"
         },
         {
-          "distribution_relative_path": "numpy/_core/include/numpy/random/LICENSE.txt",
-          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec"
+          "distribution_relative_path": "numpy/core/include/numpy/random/LICENSE.txt",
+          "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
         },
         {
           "distribution_relative_path": "numpy/ma/LICENSE",
-          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6"
+          "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
         },
         {
           "distribution_relative_path": "numpy/random/LICENSE.md",
-          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f"
+          "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
         }
       ]
     },
@@ -70,23 +70,23 @@
       "license_files": [
         {
           "distribution_relative_path": "scipy-1.14.1.dist-info/LICENSE.txt",
-          "sha256": "18128be14d9ea3bc9440075a898a948e3327e96886d01678ee8e052510571580"
+          "sha256": "52590289e7b452fbfd949dacf50e2813e3612abb7c116e5c7a0c27a496b9c5ef"
         },
         {
           "distribution_relative_path": "scipy/_lib/_uarray/LICENSE",
-          "sha256": "c80c39b5fce06ba4897e14e0b0a88b54458334d951eb1361402ffad2cfb863b4"
+          "sha256": "e4c4acc31e8287066d7c995d26e3ef902ca1977ee187b260b11c278366503811"
         },
         {
           "distribution_relative_path": "scipy/fft/_pocketfft/LICENSE.md",
-          "sha256": "c254b2b5fd30ae3c89d36ba061730563b9760fca04f1b746a1b2c3157da2c789"
+          "sha256": "c04661685cff9d8035fe1c4c3ab357e7f7633cafc06a73e9d90c3c5fede8a86a"
         },
         {
           "distribution_relative_path": "scipy/sparse/linalg/_eigen/arpack/COPYING",
-          "sha256": "0926566f9f406178d1214f8cc796e166b1213dd7c05e0c5b461a8b8ac9e50bbe"
+          "sha256": "fcb3c6c7de1460cf7d0863c3c5996e518eb8015a2eced36911f3da178440b3df"
         },
         {
           "distribution_relative_path": "scipy/spatial/qhull_src/COPYING.txt",
-          "sha256": "34db0c0c4f931861d720555c9cd7a2e228d1290ba29af0f2ee80c41bb2038afb"
+          "sha256": "962452e737df7c743a3dc2744232071028b8c0450e7674a55057c330ea1977eb"
         }
       ]
     },
@@ -101,7 +101,7 @@
       "license_files": [
         {
           "distribution_relative_path": "safetensors-0.8.0.dist-info/licenses/LICENSE",
-          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+          "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
         }
       ]
     },
@@ -133,7 +133,7 @@
       "license_files": [
         {
           "distribution_relative_path": "pyarrow-17.0.0.dist-info/LICENSE.txt",
-          "sha256": "229dbe29e4e1344e95172f6f3a4277ec0da5c7850cb03897c47f3a24b7afce08"
+          "sha256": "cc5f1e893a19a0c358119d45583b57b38ce3a24797df6b7805531c44c46c3917"
         }
       ]
     }

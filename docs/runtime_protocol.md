@@ -15,7 +15,7 @@ ViennaRNA scoring uses four processes. This is not isolated-device timing.
 | Method | Frozen sampler | Checkpoint SHA256 |
 |---|---|---|
 | RNA-IFlow | Native continuous flow, 50 steps | `8e221cc4c4382a5421890724c0548cf64492fe1be4556d498878e86e83056bc5` |
-| RNA-IFlow-RL | U2442, H8, seed/T 1009/.8, 2027/1, 3037/1.2 | `198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8` |
+| RNA-IFlow-RL | U2442, H8, K8; frozen evaluation conditions | `198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8` |
 | RNA-Design-LM SL | Official model, T=2, condition seed without target offset | `a466271bfdbf108bbb55aa19a30cdc485b4ce2bbb2d648cae1d85e29a5aabe8c` |
 | RNA-Design-LM SL+RL | Official model, T=2, condition seed without target offset | `970a3132fcb64c95141faa3c3bc041eccf38ecfa8dc2890936cdbd467d041741` |
 | GoForth | pretrained_small, T=.1, batch8, condition seed | `a28e650ba0a8fd61a92ade424d939f3d95631df63f6f9f2ae78a5f81932b472f` |

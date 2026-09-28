@@ -38,4 +38,4 @@ The initial scaled policy used U96 weights with fresh optimizer state; later con
 
 `tests/test_finite_policy.py` checks the conditional-mean bridge, finite-kernel normalization and stay mass, terminal replacement, terminal reward and clipped joint-ratio/time-sum arithmetic without weights or GPUs. These checks complement, rather than replace, checkpoint export equivalence and benchmark evaluation.
 
-The main evaluator uses the three frozen seed/temperature pairs and K=8; G above is a training group size. See [experiments](experiments.md) for result mappings. A complete portable training-data/parent-checkpoint recipe and all paper ablation adapters remain release gates; this implementation map is not a claim that those assets are already complete.
+The main evaluator uses the frozen multi-condition protocol and K=8; G above is a training group size. See [experiments](experiments.md) for result mappings. A complete portable training-data/parent-checkpoint recipe and all paper ablation adapters remain release gates; this implementation map is not a claim that those assets are already complete.

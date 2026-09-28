@@ -1,12 +1,12 @@
 # RNA Design via Conditioned Flow Matching and Finite-Policy Reinforcement Learning
 
-RNA-IFlow is a structure-conditioned RNA inverse-folding framework. RNA-IFlow-RL adds finite-policy reinforcement learning post-training.
+RNA-IFlow generates RNA sequences conditioned on a target secondary structure using Dirichlet flow matching. RNA-IFlow-RL maps the learned flow to a pairing-preserving finite policy and refines it with thermodynamic feedback.
 
-Paper and method figure: forthcoming.
+**Paper:** arXiv link will be added after the public preprint receives an identifier.
 
-This private repository is being prepared for reproducible paper release. The release branch is work in progress, not yet a validated public release.
+## Code and model availability
 
-Main model: [RNA-IFlow-RL on Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow-RL) (private). The U2442 inference export is uploaded; an independent fresh download, SHA verification, strict load and K8 CPU smoke passed. See [model reference](model/README.md).
+This repository contains research code, evaluation adapters, and compact result tables. It does not contain training datasets or model weights. The RNA-IFlow-RL weights remain in a separate private model repository; public weight access has not been announced. Inference requires an authorized local copy of the exported model.
 
 ## Installation and inference
 
@@ -14,26 +14,25 @@ Use Python 3.10 in an isolated environment:
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/load_export.py /path/to/downloaded-model
-python scripts/infer.py --model /path/to/downloaded-model --structure '(((...)))' --candidates 8 --seed 1009 --temperature 0.8
+python scripts/load_export.py /path/to/model
+python scripts/infer.py --model /path/to/model --structure '(((...)))' --candidates 8
 ```
 
-The model directory must contain the HF package, including its config and export manifest. Independent download SHA checks and CPU inference in a clean installation passed. See [inference details](docs/inference.md).
+The model directory must contain the export manifest, configuration, and weights. This single-target command is a usage example and does not reproduce the paper benchmarks. See [inference details](docs/inference.md).
 
-## Main results
+## Results
 
 | Benchmark | Pass@1 | Pass@8 |
-|---|---:|---:|
+| --- | ---: | ---: |
 | Eterna100-v2 | 0.5400 | 0.6500 |
-| Eterna100 | 0.5066667 | 0.6166667 |
-| Rfam-Taneda-27 | 0.8518519 | 0.8765432 |
-| RNAsolo-764 | 0.7120419 | 0.7312391 |
+| Eterna100 | 0.5067 | 0.6167 |
+| Rfam-27 | 0.8519 | 0.8765 |
 
-U2442; arithmetic mean over seed/temperature conditions `(1009, 0.8)`, `(2027, 1.0)`, `(3037, 1.2)`, K=8, ViennaRNA 2.7.2. Pass uses the unique-MFE success indicator. These are evaluation conditions, not independent training seeds. Source CSVs are in `results/tables/`; original evaluation receipt provenance is in `results/provenance/`. These are the official evaluation results for this release.
+These RNA-IFlow-RL values match the displayed Pass@1 and Pass@8 values in Table 1 of the submitted manuscript. They are means over the paper's evaluation conditions, with eight returned candidates per target. Compact source tables are in [`results/tables/`](results/tables/). The supplemental RNAsolo-764 analysis and its overlap limitations are documented in [dataset limitations](docs/datasets.md). These packaged results are frozen artifacts, not a fresh benchmark rerun.
 
 ## Reproduction and layout
 
-See [experiment map](docs/experiments.md), [training recipe](docs/training.md), and [dataset limitations](docs/datasets.md) for reproduction boundaries. Eterna100-v2 participated in historical model selection; RNAsolo-764 includes nine target structures overlapping SFT. No datasets or model binaries are stored in GitHub.
+See [experiment map](docs/experiments.md), [training recipe](docs/training.md), and [dataset limitations](docs/datasets.md) for reproduction boundaries. No datasets, raw candidate records, or model binaries are stored in this repository. Full training and benchmark reproduction requires the original assets; passing the included tests does not establish that those experiments were rerun.
 
 - `experiments/`: source implementation and its dependency closure.
 - `scripts/`: export, portable inference/evaluation, training entrypoints, runtime reproduction, figure rendering and aggregation.
@@ -43,6 +42,6 @@ See [experiment map](docs/experiments.md), [training recipe](docs/training.md), 
 
 ## Citation and license
 
-The current author order is 林泽丰, 方贤勇, 符天凡, 徐小华. See [`CITATION.cff`](CITATION.cff); English names, affiliations and ORCIDs will be aligned with the final paper metadata.
+The author order is Zefeng Lin, Xianyong Fang, Tianfan Fu, and Xiaohua Xu. See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
 The project is licensed under the [Apache License 2.0](LICENSE). Third-party dependencies and datasets remain subject to their own terms; no datasets are redistributed here.

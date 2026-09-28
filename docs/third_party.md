@@ -1,6 +1,6 @@
 # Third-party rights and license scope
 
-The rights holder licenses this project's original code and documentation under Apache-2.0. Third-party dependencies, models and datasets retain their own terms and are not relicensed by the root `LICENSE`. GitHub and HF remain private until explicit publication approval.
+The rights holder licenses this project's original code and documentation under Apache-2.0. Third-party dependencies, models and datasets retain their own terms and are not relicensed by the root `LICENSE`. Model weights are not distributed in this repository.
 
 `results/provenance/direct_dependency_licenses.json` records the installed versions, license classifiers and SHA256 of license files shipped with the seven pinned direct dependencies. Regenerate in the installed environment with:
 
@@ -17,6 +17,6 @@ Recorded boundaries:
 - Full transitive and bundled-native dependency review, including required notices.
 - RNAErnie source/model redistribution relies on its Apache-2.0 model-card metadata; its attribution and notices must remain with public model distribution.
 - Dataset and benchmark acquisition, version identity, attribution and redistribution permissions. No dataset redistribution is assumed.
-- English author names, affiliations and ORCIDs will be aligned with final paper metadata.
+- Paper author affiliations and optional ORCIDs belong to the verified public preprint metadata.
 
-The included GitHub source package passes its license-scope check because dependencies and datasets are referenced rather than bundled. Do not change repository visibility until explicit publication approval.
+The included source package passed the recorded license-scope check because dependencies and datasets are referenced rather than bundled. This check does not replace a full review of transitive dependencies or separately distributed weights.

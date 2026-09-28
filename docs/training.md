@@ -27,7 +27,7 @@ python experiments/supervised_snapshot/rna-flow-progressive-supervision-rl/train
 
 Arrow fields are `sequence` and `target_structure`. The nested manifest authorizes the exact prefix, membership and exclusion hashes; an arbitrary Arrow dataset is not an equivalent substitute. Asset SHA values are in the supervised contract. Dataset acquisition and redistribution instructions remain incomplete, so the command is not yet a turnkey reproduction. The original source used single-device training; adding DDP changes this historical recipe.
 
-The supervised snapshot intentionally retains the historical scorer, including its extra length normalization of ensemble defect, because it participated in checkpoint selection. Do not use it to produce paper quality tables. Paper-facing evaluation uses `scripts/paper_metrics.py` and the corrected NED convention. This distinction preserves training provenance without silently rewriting historical selection.
+The supervised snapshot retains its original scorer, including an extra length normalization of ensemble defect. Do not use it to produce paper quality tables. Paper-facing evaluation uses `scripts/paper_metrics.py` and the corrected NED convention. The snapshot is preserved for implementation provenance.
 
 ## Nested Arrow construction
 
@@ -58,7 +58,7 @@ python experiments/supervised_snapshot/rna-flow-progressive-supervision-rl/build
   --output /path/to/fresh-source-contract --seed 9176 --tasks-per-bin 12
 ```
 
-The source verifier pins the RNA-Design-LM code revision and every source-shard hash/row count. Its historic `monitor-only` benchmark label describes that supervised-stage contract only, not the later Eterna selection history disclosed in [datasets](datasets.md).
+The source verifier pins the RNA-Design-LM code revision and every source-shard hash/row count. Its `monitor-only` benchmark label describes the supervised-stage contract only; see [dataset limitations](datasets.md) for benchmark interpretation.
 
 **Byte-level reproduction caveat:** the original split builder iterates a Python set before shuffling validation rows. A synthetic check with identical seed 1009 but `PYTHONHASHSEED=1` versus `2` produced the same training rows and validation membership but different validation row order. The original process hash seed is not established. Do not claim that `--seed 1009` alone reconstructs the historical validation JSONL SHA. Preserve the original frozen split or establish exact ordering before claiming byte-level reproduction; no historical split is silently rewritten. The downstream thermo48 selector ranks by a stable content hash, but this does not retroactively make the original validation file ordering deterministic.
 

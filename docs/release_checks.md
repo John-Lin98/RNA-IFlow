@@ -1,6 +1,6 @@
 # Release checks and outstanding gates
 
-GitHub and Hugging Face must remain private until explicit publication approval.
+This repository's public release requires passing the tracked-file audit and engineering checks. Model weights are distributed separately and are not public as part of this release.
 
 ## Fast regression tests
 
@@ -14,16 +14,16 @@ Run `python scripts/update_inventory.py` from any directory. It indexes only tra
 
 ## License
 
-The rights holder selected Apache-2.0 for this project. The complete license is stored in the root `LICENSE`, and `CITATION.cff` records the approved Chinese author order. Installed direct-dependency version and license-file evidence is recorded in `results/provenance/direct_dependency_licenses.json`; see [third-party scope](third_party.md). Dependencies and datasets are not bundled or relicensed by this repository.
+The rights holder selected Apache-2.0 for this project. The complete license is stored in the root `LICENSE`, and `CITATION.cff` records the author order in English. Installed direct-dependency version and license-file evidence is recorded in `results/provenance/direct_dependency_licenses.json`; see [third-party scope](third_party.md). Dependencies and datasets are not bundled or relicensed by this repository.
 
 ## Manuscript and timing
 
-The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. The official protocol is fixed to seed/temperature pairs `(1009, 0.8)`, `(2027, 1.0)`, and `(3037, 1.2)`, K=8, with ViennaRNA 2.7.2.
+The inspected Table 1 snapshot agrees with the source benchmark-success table at displayed precision. The frozen evaluation protocol uses K=8 and ViennaRNA 2.7.2.
 
 The Table 2 resident-model timing source has been reaggregated from 3,000 timing records: median across two repeats within each task/condition, then median across 300 groups. RNA-IFlow-RL is 0.73166435575 s/K8 and RNA-IFlow is 0.88450397525 s/K8, matching the displayed 0.73/0.88. See `results/tables/resident_runtime/`. Native-search runtime is packaged separately with failure counts retained; resident neural timing excludes setup/warmup and later scoring. The portable five-model execution entrypoint is `scripts/measure_resident_runtime.py`; its real-model GPU equivalence preflight remains distinct from CPU orchestration tests.
 
 ## Current release gates
 
-Completed engineering gates: HF fresh-download SHA and strict-load/K8 smoke; clean-environment installation and 17 CPU regression tests; compact table/figure source packaging with provenance; paper-only inventory; final tracked-file path/secret/size scan; clean pushed release branch; and a Chinese Draft PR. Full benchmark or CUDA timing reruns remain optional reproduction strengthening and are not represented as completed experiments.
+The code and compact result assets were packaged with provenance and checked for path and credential signatures. On 2026-09-29, an isolated Windows Python 3.12 environment passed `compileall`, all 17 unit tests, `infer.py --help`, NumPy/PyTorch array interoperation, and `pip check`. The tracked-file scan found no credential signatures, local private paths, or model binaries. PyTorch 2.4.0 required an OpenMP runtime DLL absent from the host; this was supplied only to the isolated QA environment. Earlier model-package transport, strict-load and single-target CPU smoke checks are historical engineering receipts. No model-weight smoke or full benchmark/CUDA timing rerun was performed for this publication step.
 
-The project license, author order and official evaluation protocol are now approved. English author names, affiliations and ORCIDs remain a metadata refinement rather than a code-release blocker. GitHub and Hugging Face remain private until explicit publication approval.
+The project license, author order, and evaluation protocol are recorded. The code repository and model hosting service have separate publication states; public access to this repository does not imply public access to model weights.
