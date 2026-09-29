@@ -11,23 +11,34 @@ FAIR = Path(__file__).resolve().parents[1] / 'experiments/rna-flow-fair-componen
 sys.path.insert(0, str(FAIR))
 from model import FairRNAFlow
 
-MODEL_SHA256 = '8a8dcf74014be2e3ab9571a19facebaad639ca4fd6574bc97d7bdf5d9ffe9f9d'
-CONFIG_SHA256 = 'fd84cd17150e1ad1d9e756a05a78dc13c24463ac27bcf4c771e5c7e8f07375fb'
+EXPORTS = {
+    'RNA-IFlow': (
+        '4f33b51d28aa0fa7fab7a27cd6b0422c2eed9654f204bcedb80a771851c5a151',
+        '948220c0bf8750c09108300d5745b3b16b2eeef8e5789ad48b111e13bf94c316',
+    ),
+    'RNA-IFlow-RL': (
+        '8a8dcf74014be2e3ab9571a19facebaad639ca4fd6574bc97d7bdf5d9ffe9f9d',
+        'fd84cd17150e1ad1d9e756a05a78dc13c24463ac27bcf4c771e5c7e8f07375fb',
+    ),
+}
+MODEL_SHA256, CONFIG_SHA256 = EXPORTS['RNA-IFlow-RL']
 
 
-def parse_config(raw):
-    """Bind architecture to the independently verified U2442 HF package."""
-    if hashlib.sha256(raw).hexdigest() != CONFIG_SHA256:
-        raise ValueError('U2442 config SHA256 mismatch')
+def parse_config(raw, expected_sha256=CONFIG_SHA256):
+    """Bind the architecture to a verified inference export."""
+    if hashlib.sha256(raw).hexdigest() != expected_sha256:
+        raise ValueError('Export config SHA256 mismatch')
     return json.loads(raw)
 
 
 def load_export(directory, device='cpu'):
     directory = Path(directory)
     manifest = json.loads((directory / 'export_manifest.json').read_text())
-    if manifest['model_sha256'] != MODEL_SHA256:
-        raise ValueError('This loader is frozen to the U2442 inference export')
-    config = parse_config((directory / 'config.json').read_bytes())
+    model_sha256 = manifest['model_sha256']
+    matching = [item for item in EXPORTS.values() if item[0] == model_sha256]
+    if len(matching) != 1:
+        raise ValueError('Unrecognized inference export')
+    config = parse_config((directory / 'config.json').read_bytes(), matching[0][1])
     weights = directory / 'model.safetensors'
     with weights.open('rb') as stream:
         h = hashlib.sha256()

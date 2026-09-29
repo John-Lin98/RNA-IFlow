@@ -1,6 +1,11 @@
-# RNA-IFlow-RL 模型引用
+# RNA-IFlow / RNA-IFlow-RL 模型引用
 
-主模型权重由独立的模型仓库管理，目前未随此 GitHub 代码仓公开。使用推理脚本需要已获授权的本地模型副本。
+两组完整推理权重由独立的 [HF 模型仓](https://huggingface.co/jojojoojooo/RNA-IFlow) 管理，不随 GitHub 代码仓存放。HF 仓当前 private，完成上传恢复测试和公开发布收口后开放。
+
+监督 RNA-IFlow 原始 checkpoint SHA256：
+`8e221cc4c4382a5421890724c0548cf64492fe1be4556d498878e86e83056bc5`。
+完整推理导出 SHA256：
+`4f33b51d28aa0fa7fab7a27cd6b0422c2eed9654f204bcedb80a771851c5a151`。
 
 主模型为 C3+D5 U2442。原始 checkpoint SHA256：
 `198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8`。
@@ -10,8 +15,8 @@
 
 导出包含冻结 backbone、监督参数及 U2442 更新参数，不含 optimizer/RNG。不能作为精确续训 checkpoint。原始 .pt 暂不额外上传：其权重是局部状态，精确恢复还依赖原始数据、合同、父模型与 RNG；本次优先提供独立推理模型，避免误导和重复权重。
 
-223 个张量逐项相等，固定双样本 CPU 输出差异为 0。独立下载的模型包通过 SHA256 清单校验，并在全新 CPU 环境严格加载、完成 K=8 单目标推理与 ViennaRNA 评分。这是发布链路 smoke，不是完整 benchmark 重跑。
+两组导出各有 223 个张量逐项相等，固定双样本 CPU 输出差异为 0。RL 模型从现有 private HF 仓全新下载后，通过 SHA256 校验并在 CPU 上严格加载、完成 K=8 单目标推理与 ViennaRNA 评分；监督模型通过 CPU K=8 单目标生成。新 HF 仓的双模型下载恢复测试尚待完成。这是发布链路 smoke，不是完整 benchmark 重跑。
 
 使用方法见 [推理文档](../docs/inference.md)。项目代码采用 Apache-2.0；第三方依赖与数据仍遵循各自条款。
 
-加载器同时固定权重与配置身份。仓内参考配置为 `configs/u2442.json`。配置字节变更会被拒绝；不能只保留权重 SHA 就声称仍为已验收主模型。
+加载器同时固定两组权重与各自配置身份。仓内 RL 参考配置为 `configs/u2442.json`。配置字节变更会被拒绝；不能只保留权重 SHA 就声称仍为已验收模型。

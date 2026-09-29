@@ -2,11 +2,15 @@
 
 RNA-IFlow generates RNA sequences conditioned on a target secondary structure using Dirichlet flow matching. RNA-IFlow-RL maps the learned flow to a pairing-preserving finite policy and refines it with thermodynamic feedback.
 
-**Paper:** arXiv link will be added after the public preprint receives an identifier.
+**Paper:** arXiv identifier pending after submission.
 
-## Code and model availability
+## Paper, code, and model weights
 
-This repository contains research code, evaluation adapters, and compact result tables. It does not contain training datasets or model weights. The RNA-IFlow-RL weights remain in a separate private model repository; public weight access has not been announced. Inference requires an authorized local copy of the exported model.
+This repository contains research code, evaluation adapters, and compact result tables. The paper's preprint was submitted to arXiv; its public link will be added when arXiv assigns an identifier. Model weights are archived separately at [Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow). The model repository is currently private while its upload, restoration, and release checks finish. No training datasets or model binaries are stored in this GitHub repository.
+
+### Model Weights
+
+The model repository contains two complete inference exports: `RNA-IFlow/` for the supervised flow model and `RNA-IFlow-RL/` for the C3+D5 U2442 final model. The `arxiv-v1` revision will identify the exports corresponding to the paper's arXiv v1 after the final verification and public identifier are available. The original server checkpoints are retained separately; the portable exports cannot resume training exactly. See the [model card](https://huggingface.co/jojojoojooo/RNA-IFlow) and [inference details](docs/inference.md).
 
 ## Installation and inference
 
@@ -14,11 +18,12 @@ Use Python 3.10 in an isolated environment:
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/load_export.py /path/to/model
-python scripts/infer.py --model /path/to/model --structure '(((...)))' --candidates 8
+python scripts/load_export.py /path/to/RNA-IFlow-RL
+python scripts/infer_flow.py --model /path/to/RNA-IFlow --structure '(((...)))...' --candidates 8
+python scripts/infer.py --model /path/to/RNA-IFlow-RL --structure '(((...)))...' --candidates 8
 ```
 
-The model directory must contain the export manifest, configuration, and weights. This single-target command is a usage example and does not reproduce the paper benchmarks. See [inference details](docs/inference.md).
+Each model directory must contain its export manifest, configuration, and weights. These single-target commands are usage examples and do not reproduce the paper benchmarks. See [inference details](docs/inference.md).
 
 ## Results
 
@@ -35,7 +40,7 @@ These RNA-IFlow-RL values match the displayed Pass@1 and Pass@8 values in Table 
 See [experiment map](docs/experiments.md), [training recipe](docs/training.md), and [dataset limitations](docs/datasets.md) for reproduction boundaries. No datasets, raw candidate records, or model binaries are stored in this repository. Full training and benchmark reproduction requires the original assets; passing the included tests does not establish that those experiments were rerun.
 
 - `experiments/`: source implementation and its dependency closure.
-- `scripts/`: export, portable inference/evaluation, training entrypoints, runtime reproduction, figure rendering and aggregation.
+- `scripts/`: export, portable inference/evaluation for both models, training entrypoints, runtime reproduction, figure rendering and aggregation.
 - `results/tables/`: compact main-model and per-condition results.
 - `results/provenance/`: contracts and evaluation receipts.
 - `docs/`, `model/`: reproduction and model references.
