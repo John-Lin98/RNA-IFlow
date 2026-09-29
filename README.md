@@ -6,7 +6,7 @@ RNA-IFlow generates RNA sequences conditioned on a target secondary structure us
 
 ## Paper, code, and model weights
 
-This repository contains research code, evaluation adapters, and compact result tables. The paper's preprint was submitted to arXiv; its public link will be added when arXiv assigns an identifier. Model weights are archived separately at [Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow). The model repository is currently private while its upload, restoration, and release checks finish. No training datasets or model binaries are stored in this GitHub repository.
+This repository contains research code, evaluation adapters, and compact result tables. The paper's preprint was submitted to arXiv; its public link will be added when arXiv assigns an identifier. Model weights are archived separately at [Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow). The model repository is public under Apache-2.0; both complete inference exports passed upload, independent download, SHA256, and CPU single-target smoke checks. No training datasets or model binaries are stored in this GitHub repository.
 
 ### Model Weights
 

@@ -6,7 +6,7 @@ This map identifies the packaged implementation and result assets relevant to th
 
 Checkpoint: C3+D5 U2442, original SHA256 `198fd79e7680f4b01e758f063aadab00c0d4e6709ac4d2a220249a267a70ebe8`.
 
-Model weights are not public as part of this code release. A separate private model package passed the recorded transport, strict-load, and single-target inference checks; those checks do not constitute a benchmark rerun.
+Model weights are publicly available in the separate [Hugging Face model repository](https://huggingface.co/jojojoojooo/RNA-IFlow). Both portable exports passed independent download, SHA256, strict-load, and single-target inference checks; those checks do not constitute a benchmark rerun.
 
 The [method implementation map](methods.md) identifies FPM, SPD and TTR functions and distinguishes logical updates, optimizer steps, training group size and inference candidate budget.
 

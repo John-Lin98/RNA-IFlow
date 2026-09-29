@@ -1,6 +1,6 @@
 # Release checks and outstanding gates
 
-This repository's public release requires passing the tracked-file audit and engineering checks. Model weights are distributed separately and are not public as part of this release.
+This repository's public release requires passing the tracked-file audit and engineering checks. Model weights are distributed publicly through the separate [Hugging Face model repository](https://huggingface.co/jojojoojooo/RNA-IFlow); no model binaries are stored in this GitHub repository.
 
 ## Fast regression tests
 
@@ -24,6 +24,6 @@ The Table 2 resident-model timing source has been reaggregated from 3,000 timing
 
 ## Current release gates
 
-The code and compact result assets were packaged with provenance and checked for path and credential signatures. On 2026-09-29, an isolated Windows Python 3.12 environment passed `compileall`, all 17 unit tests, `infer.py --help`, NumPy/PyTorch array interoperation, and `pip check`. The tracked-file scan found no credential signatures, local private paths, or model binaries. PyTorch 2.4.0 required an OpenMP runtime DLL absent from the host; this was supplied only to the isolated QA environment. Earlier model-package transport, strict-load and single-target CPU smoke checks are historical engineering receipts. No model-weight smoke or full benchmark/CUDA timing rerun was performed for this publication step.
+The code and compact result assets were packaged with provenance and checked for path and credential signatures. On 2026-09-29, an isolated Windows Python 3.12 environment passed `compileall`, all 17 unit tests, `infer.py --help`, NumPy/PyTorch array interoperation, and `pip check`. The tracked-file scan found no credential signatures, local private paths, or model binaries. PyTorch 2.4.0 required an OpenMP runtime DLL absent from the host; this was supplied only to the isolated QA environment. Both complete HF exports passed independent download, SHA256, strict-load and single-target CPU smoke checks during this release. No full benchmark or CUDA timing rerun was performed.
 
 The project license, author order, and evaluation protocol are recorded. The code repository and model hosting service have separate publication states; public access to this repository does not imply public access to model weights.
