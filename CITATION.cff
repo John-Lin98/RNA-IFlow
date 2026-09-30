@@ -17,3 +17,18 @@ authors:
     affiliation: "University of Science and Technology of China"
 repository-code: "https://github.com/John-Lin98/RNA-IFlow"
 license: Apache-2.0
+preferred-citation:
+  type: article
+  title: "RNA Design via Conditioned Flow Matching and Finite-Policy Reinforcement Learning"
+  authors:
+    - family-names: "Lin"
+      given-names: "Zefeng"
+    - family-names: "Fang"
+      given-names: "Xianyong"
+    - family-names: "Fu"
+      given-names: "Tianfan"
+    - family-names: "Xu"
+      given-names: "Xiaohua"
+  year: 2026
+  doi: "10.48550/arXiv.2609.36885"
+  url: "https://arxiv.org/abs/2609.36885"

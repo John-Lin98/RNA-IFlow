@@ -2,15 +2,15 @@
 
 RNA-IFlow generates RNA sequences conditioned on a target secondary structure using Dirichlet flow matching. RNA-IFlow-RL maps the learned flow to a pairing-preserving finite policy and refines it with thermodynamic feedback.
 
-**Paper:** arXiv identifier pending after submission.
+**Paper:** [arXiv:2609.36885](https://arxiv.org/abs/2609.36885) (v1; q-bio.BM, cross-listed cs.LG).
 
 ## Paper, code, and model weights
 
-This repository contains research code, evaluation adapters, and compact result tables. The paper's preprint was submitted to arXiv; its public link will be added when arXiv assigns an identifier. Model weights are archived separately at [Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow). The model repository is public under Apache-2.0; both complete inference exports passed upload, independent download, SHA256, and CPU single-target smoke checks. No training datasets or model binaries are stored in this GitHub repository.
+This repository contains research code, evaluation adapters, and compact result tables. The public preprint is [arXiv:2609.36885](https://arxiv.org/abs/2609.36885). Model weights are archived separately at [Hugging Face](https://huggingface.co/jojojoojooo/RNA-IFlow). The model repository is public under Apache-2.0; both complete inference exports passed upload, independent download, SHA256, and CPU single-target smoke checks. No training datasets or model binaries are stored in this GitHub repository.
 
 ### Model Weights
 
-The model repository contains two complete inference exports: `RNA-IFlow/` for the supervised flow model and `RNA-IFlow-RL/` for the C3+D5 U2442 final model. The `arxiv-v1` revision will identify the exports corresponding to the paper's arXiv v1 after the final verification and public identifier are available. The original server checkpoints are retained separately; the portable exports cannot resume training exactly. See the [model card](https://huggingface.co/jojojoojooo/RNA-IFlow) and [inference details](docs/inference.md).
+The model repository contains two complete inference exports: `RNA-IFlow/` for the supervised flow model and `RNA-IFlow-RL/` for the C3+D5 U2442 final model. The [HF `arxiv-v1` revision](https://huggingface.co/jojojoojooo/RNA-IFlow/tree/arxiv-v1) contains the exports corresponding to the paper's arXiv v1; the [GitHub `arxiv-v1` tag](https://github.com/John-Lin98/RNA-IFlow/tree/arxiv-v1) freezes the matching code. The original server checkpoints are retained separately; the portable exports cannot resume training exactly. See the [model card](https://huggingface.co/jojojoojooo/RNA-IFlow) and [inference details](docs/inference.md).
 
 ## Installation and inference
 
